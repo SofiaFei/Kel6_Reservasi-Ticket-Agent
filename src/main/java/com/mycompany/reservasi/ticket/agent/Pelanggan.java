@@ -1,15 +1,21 @@
 
 /**
- * Write a description of class Pelanggan here.
+ * class Pelanggan .
  *
- * @author (your name)
+ * @author (Sofia (21081070100)
+ * @author (Ayu Aulia (21081070100)
+ * @author (Dhaifina Alifa Putri (2108107010018)
+ * @author (Putri Ulfayani (21081070100)
+ * @author (Siti Nurrahmasita(2108107010015)
+ *
  * @version (a version number or a date)
  */
 public class Pelanggan
 {
     private String nama;
     private int ktp;
-
+    private String noHP;
+    
     /**
      * Constructor for objects of class Pelanggan
      */
@@ -63,5 +69,18 @@ public class Pelanggan
      */
     public void setKtp(int ktpbaru) {
         this.ktp = ktpbaru;
+    }
+    
+    public String getNoHP() {
+        return this.noHP;
+    }
+
+    /**
+     * Method ini berfungsi untuk menetapkan ktp dari pelanggan
+     *
+     * @param ktpbaru ktp baru dari pelanggan
+     */
+    public void setNoHP(String noHP) {
+        this.noHP = noHP;
     }
 }
