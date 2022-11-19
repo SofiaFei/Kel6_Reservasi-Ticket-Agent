@@ -13,8 +13,7 @@
  */
 public class Taksi extends Kendaraan
 {
-    @Override
-    public void ketTempat(){
-        
+    public Taksi (String a, String t, int h, String k){
+        super(a, t, h, k);
     }
 }

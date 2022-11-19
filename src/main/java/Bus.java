@@ -13,8 +13,7 @@
  */
 public class Bus extends Kendaraan
 {
-    @Override
-    public void ketTempat(){
-        
+    public Bus (String a, String t, int h, String k){
+        super(a, t, h, k);
     }
 }

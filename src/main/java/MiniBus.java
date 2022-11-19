@@ -13,8 +13,7 @@
  */
 public class MiniBus extends Kendaraan
 {
-    @Override
-    public void ketTempat(){
-        
+    public MiniBus (String a, String t, int h, String k){
+        super(a, t, h, k);
     }
 }
