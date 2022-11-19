@@ -1,4 +1,3 @@
-
 /**
  * class Kendaraan .
  *
@@ -11,20 +10,35 @@
  * @version (11-11-2022)
  * @since (10-10-2022)
  */
-public abstract class Kendaraan
+public class Kendaraan
 {
-    // instance variables - replace the example below with your own
-    private String noPolisi;
+    
+    private String asal;
+    private String tujuan;
+    private String ketTempat;
     private int harga;
     
-    public abstract void ketTempat();
+    public Kendaraan(String a, String t, int h, String k){
+        this.asal = a;
+        this.tujuan = t;
+        this.harga = h;
+        this.ketTempat = k;
+    } 
     
-    public String getNoPolisi(){
-        return this.noPolisi;
+    public String getAsal(){
+        return this.asal;
     }
     
-    public void setNoPolisi(String noPolisi){
-        this.noPolisi = noPolisi;
+    public void setAsal(String asal){
+        this.asal = asal;
+    }
+    
+    public String getTujuan(){
+        return this.tujuan; 
+    }
+    
+    public void setTujuan(String tujuan){
+        this.tujuan = tujuan;
     }
     
     public int getHarga(){
@@ -35,6 +49,13 @@ public abstract class Kendaraan
         this.harga = harga;
     }
     
+    public String getketTempat(){
+        return this.ketTempat; 
+    }
+    
+    public void setketTempat(String ketTempat){
+        this.ketTempat = ketTempat;
+    }
     
     
 }

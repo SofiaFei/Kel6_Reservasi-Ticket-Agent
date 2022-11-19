@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Taksi
 comment0.text=\r\n\ class\ Taksi.\r\n\r\n\ @author\ (Sofia\ (2108107010006)\r\n\ @author\ (Ayu\ Aulia\ (2108107010038)\r\n\ @author\ (Dhaifina\ Alifa\ Putri\ (2108107010018)\r\n\ @author\ (Putri\ Ulfayani\ (2108107010004)\r\n\ @author\ (Siti\ Nurrahmasita(2108107010015)\r\n\r\n\ @version\ (11-11-2022)\r\n\ @since\ (10-10-2022)\r\n
-comment1.params=
-comment1.target=void\ ketTempat()
+comment1.params=a\ t\ h\ k
+comment1.target=Taksi(java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
 numComments=2
