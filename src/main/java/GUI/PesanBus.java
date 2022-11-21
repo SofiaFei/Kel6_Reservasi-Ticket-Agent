@@ -1,8 +1,12 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
+
+import Class.Kendaraan;
+import Class.Bus;
 
 /**
  *
@@ -10,9 +14,6 @@ package GUI;
  */
 public class PesanBus extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DataBus
-     */
     public PesanBus() {
         initComponents();
     }
@@ -31,13 +32,10 @@ public class PesanBus extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        AsalBox = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        TujuanBox = new javax.swing.JComboBox<>();
+        Tujuan = new javax.swing.JComboBox<>();
         WaktuBox = new javax.swing.JComboBox<>();
         NextButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        KetField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         NamaField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -58,26 +56,18 @@ public class PesanBus extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(170, 20, 90, 17);
 
-        AsalBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Banda Aceh", "Medan", "Padang" }));
-        AsalBox.addActionListener(new java.awt.event.ActionListener() {
+        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau" }));
+        Tujuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalBoxActionPerformed(evt);
+                TujuanActionPerformed(evt);
             }
         });
-        jPanel1.add(AsalBox);
-        AsalBox.setBounds(30, 200, 110, 20);
-
-        jLabel2.setText("Keterangan Penjemputan :");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 230, 150, 16);
-
-        TujuanBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Banda Aceh", "Medan", "Padang" }));
-        jPanel1.add(TujuanBox);
-        TujuanBox.setBounds(30, 370, 110, 22);
+        jPanel1.add(Tujuan);
+        Tujuan.setBounds(30, 200, 110, 22);
 
         WaktuBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         jPanel1.add(WaktuBox);
-        WaktuBox.setBounds(30, 410, 72, 22);
+        WaktuBox.setBounds(30, 240, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -86,7 +76,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 470, 70, 22);
+        NextButton.setBounds(260, 310, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -100,9 +90,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 470, 72, 22);
-        jPanel1.add(KetField);
-        KetField.setBounds(40, 250, 300, 100);
+        BackButton.setBounds(100, 310, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -127,12 +115,15 @@ public class PesanBus extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
                         .addComponent(NamaField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
                         .addComponent(KTPField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
                         .addComponent(HPField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
@@ -171,10 +162,6 @@ public class PesanBus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AsalBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AsalBoxActionPerformed
-
     private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NamaFieldActionPerformed
@@ -194,6 +181,20 @@ public class PesanBus extends javax.swing.JFrame {
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
+
+    private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
+        Kendaraan bus = new Bus();
+        if(Tujuan.getSelectedItem().equals("Tujuan")){
+            buttonGroup1.clearSelection();
+            bus.setHarga(0);
+        } else if(Tujuan.getSelectedItem().equals("Medan")){
+            bus.setHarga(200000);
+        } else if(Tujuan.getSelectedItem().equals("Padang")){
+            bus.setHarga(400000);
+        } else if(Tujuan.getSelectedItem().equals("Riau")){
+            bus.setHarga(500000);
+        }
+    }//GEN-LAST:event_TujuanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,19 +233,16 @@ public class PesanBus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> AsalBox;
     private javax.swing.JButton BackButton;
     private javax.swing.JTextField HPField;
     private javax.swing.JTextField KTPField;
-    private javax.swing.JTextField KetField;
     private javax.swing.JTextField NamaField;
     private javax.swing.JButton NextButton;
-    private javax.swing.JComboBox<String> TujuanBox;
+    private javax.swing.JComboBox<String> Tujuan;
     private javax.swing.JComboBox<String> WaktuBox;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

@@ -13,7 +13,7 @@ package Class;
  */
 public class MiniBus extends Kendaraan
 {
-    public MiniBus (String a, String t, int h, String k){
-        super(a, t, h, k);
+    public MiniBus (String t, int h, String k){
+        super(t, h, k);
     }
 }

@@ -13,27 +13,19 @@ package Class;
  */
 public class Kendaraan  implements Struk
 {
-    
-    private String asal;
     private String tujuan;
     private String ketTempat;
     private int harga;
     
-    public Kendaraan(String a, String t, int h, String k){
-        this.asal = a;
+    public Kendaraan(){
+        
+    }
+    
+    public Kendaraan(String t, int h, String k){
         this.tujuan = t;
         this.harga = h;
         this.ketTempat = k;
     } 
-    
-    @Override
-    public String getAsal(){
-        return this.asal;
-    }
-    
-    public void setAsal(String asal){
-        this.asal = asal;
-    }
     
     @Override
     public String getTujuan(){

@@ -13,7 +13,7 @@ package Class;
  */
 public class Taksi extends Kendaraan
 {
-    public Taksi (String a, String t, int h, String k){
-        super(a, t, h, k);
+    public Taksi (String t, int h, String k){
+        super(t, h, k);
     }
 }

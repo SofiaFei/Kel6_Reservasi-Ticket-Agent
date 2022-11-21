@@ -13,15 +13,8 @@ package Class;
  */
 public class Tiket implements Struk
 {
-    private String asal;
     private int harga;
     private String tujuan;
-    
-    @Override
-    public String getAsal()
-    {
-        return this.asal;
-    }
     
     @Override
     public int getHarga()

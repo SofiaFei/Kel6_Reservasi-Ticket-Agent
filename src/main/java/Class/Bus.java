@@ -13,7 +13,9 @@ package Class;
  */
 public class Bus extends Kendaraan
 {
-    public Bus (String a, String t, int h, String k){
-        super(a, t, h, k);
+    public Bus(){}
+    
+    public Bus (String t, int h, String k){
+        super(t, h, k);
     }
 }
