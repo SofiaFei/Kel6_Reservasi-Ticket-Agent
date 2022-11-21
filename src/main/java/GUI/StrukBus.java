@@ -15,12 +15,13 @@ import Class.Pelanggan;
  * @author romaf
  */
 public class StrukBus extends javax.swing.JFrame {
-
+static Tiket txt;
     /**
      * Creates new form DataHargaBus
      */
     public StrukBus() {
         initComponents();
+        this.tkt = new Tiket();
     }
 
     /**
@@ -82,6 +83,11 @@ public class StrukBus extends javax.swing.JFrame {
                 BackButtonMouseClicked(evt);
             }
         });
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(BackButton);
         BackButton.setBounds(60, 240, 80, 20);
         jPanel1.add(HargaField);
@@ -95,6 +101,7 @@ public class StrukBus extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 110, 70, 20);
 
+        TujuanField.setEditable(false);
         TujuanField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 TujuanFieldKeyReleased(evt);
@@ -103,6 +110,8 @@ public class StrukBus extends javax.swing.JFrame {
         jPanel1.add(TujuanField);
         TujuanField.setBounds(140, 110, 150, 22);
 
+        AsalField.setEditable(false);
+        AsalField.setText(tkt.getAsal());
         AsalField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AsalFieldActionPerformed(evt);
@@ -152,9 +161,20 @@ public class StrukBus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AsalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalFieldActionPerformed
-        // TODO add your handling code here:
+        // Tiket tkt = new Tiket();
+        // AsalField.setText("" + tkt.getAsal());
     }//GEN-LAST:event_AsalFieldActionPerformed
-
+    
+    public static String cetakAsal(){
+        Tiket tkt = new Tiket();
+        return tkt.getAsal();
+    }
+    
+    public static String cetakTujuan(){
+        Tiket tkt = new Tiket();
+        return tkt.getTujuan();
+    }
+    
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     PesanBus bus = new PesanBus();
     bus.setVisible(true);
@@ -175,17 +195,21 @@ public class StrukBus extends javax.swing.JFrame {
         // Tiket tkt = new Tiket();
         // AsalField.setText("" + tkt.getAsal());
         
-        Kendaraan bus = new Bus();
-        AsalField.setText("" +bus.getAsal());
+        // Kendaraan bus = new Bus();
+        // AsalField.setText("" +bus.getAsal());
     }//GEN-LAST:event_AsalFieldKeyReleased
 
     private void TujuanFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TujuanFieldKeyReleased
-        // Tiket tkt = new Tiket();
-        // TujuanField.setText("" + tkt.getTujuan());
+        Tiket tkt = new Tiket();
+        TujuanField.setText("" + tkt.getTujuan());
         
-        Kendaraan bus = new Bus();
-        TujuanField.setText("" +bus.getTujuan());
+        // Kendaraan bus = new Bus();
+        // TujuanField.setText("" +bus.getTujuan());
     }//GEN-LAST:event_TujuanFieldKeyReleased
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BackButtonActionPerformed
 
     /**
      * @param args the command line arguments
