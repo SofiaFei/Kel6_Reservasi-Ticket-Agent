@@ -119,7 +119,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_MiniBusButtonMouseClicked
 
     private void TaxiButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaxiButtonMouseClicked
-    PesanTaxi taxi = new PesanTaxi();
+    PesanTaksi taxi = new PesanTaksi();
     taxi.setVisible(true);
     dispose();
     }//GEN-LAST:event_TaxiButtonMouseClicked

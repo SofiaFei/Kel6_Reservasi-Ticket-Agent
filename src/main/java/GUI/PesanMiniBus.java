@@ -4,12 +4,17 @@
  */
 package GUI;
 
+import Class.Kendaraan;
+import Class.MiniBus;
+import Class.Pelanggan;
+
 /**
  *
  * @author romaf
  */
 public class PesanMiniBus extends javax.swing.JFrame {
-
+    
+    private Kendaraan mb = new MiniBus();
     /**
      * Creates new form DataMiniBus
      */
@@ -28,13 +33,10 @@ public class PesanMiniBus extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        AsalBox = new javax.swing.JComboBox<>();
-        TujuanBox = new javax.swing.JComboBox<>();
-        WaktuBox = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        Tujuan = new javax.swing.JComboBox<>();
+        Waktu = new javax.swing.JComboBox<>();
         NextButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        KetField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         NamaField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -52,26 +54,13 @@ public class PesanMiniBus extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(160, 20, 120, 17);
 
-        AsalBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Banda Aceh", "Singkil", "Meulaboh" }));
-        AsalBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalBoxActionPerformed(evt);
-            }
-        });
-        jPanel1.add(AsalBox);
-        AsalBox.setBounds(30, 190, 110, 22);
+        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Singkil", "Meulaboh", "Takengon" }));
+        jPanel1.add(Tujuan);
+        Tujuan.setBounds(40, 210, 110, 22);
 
-        TujuanBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Banda Aceh", "Singkil", "Meulaboh" }));
-        jPanel1.add(TujuanBox);
-        TujuanBox.setBounds(30, 360, 110, 22);
-
-        WaktuBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
-        jPanel1.add(WaktuBox);
-        WaktuBox.setBounds(30, 400, 72, 22);
-
-        jLabel2.setText("Keterangan Penjemputan :");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 220, 150, 16);
+        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
+        jPanel1.add(Waktu);
+        Waktu.setBounds(40, 250, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -79,8 +68,13 @@ public class PesanMiniBus extends javax.swing.JFrame {
                 NextButtonMouseClicked(evt);
             }
         });
+        NextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 470, 70, 22);
+        NextButton.setBounds(260, 320, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -94,9 +88,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 470, 72, 22);
-        jPanel1.add(KetField);
-        KetField.setBounds(30, 240, 300, 100);
+        BackButton.setBounds(60, 320, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -170,10 +162,6 @@ public class PesanMiniBus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AsalBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AsalBoxActionPerformed
-
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BackButtonActionPerformed
@@ -185,7 +173,8 @@ public class PesanMiniBus extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
-    StrukMiniBus struk = new StrukMiniBus();
+    String convert = String.valueOf(mb.getHarga());
+    TampilanStruk struk = new TampilanStruk(mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
@@ -193,6 +182,42 @@ public class PesanMiniBus extends javax.swing.JFrame {
     private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NamaFieldActionPerformed
+
+    private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        Pelanggan pl = new Pelanggan();
+        String nama, noKtp, noHp;
+        if(Tujuan.getSelectedItem().equals("Tujuan")){
+            mb.setHarga(0);
+        } else if(Tujuan.getSelectedItem().equals("Singkil")){
+            mb.setHarga(250000);
+            mb.setTujuan("Singkil");
+        } else if(Tujuan.getSelectedItem().equals("Meulaboh")){
+            mb.setHarga(120000);
+            mb.setTujuan("Meulaboh");
+        } else if(Tujuan.getSelectedItem().equals("Takengon")){
+            mb.setHarga(170000);
+            mb.setTujuan("Takengon");
+        }
+        
+        if(Waktu.getSelectedItem().equals("Waktu")){
+            mb.setWaktu("");
+        } else if(Waktu.getSelectedItem().equals("08:00")){
+            mb.setWaktu("08:00");
+        } else if(Waktu.getSelectedItem().equals("12:00")){
+            mb.setWaktu("12:00");
+        } else if(Waktu.getSelectedItem().equals("20:00")){
+            mb.setWaktu("20:00");
+        }
+    
+        nama = String.valueOf(NamaField.getText());
+        pl.setNama(nama);
+    
+        noKtp = String.valueOf(KTPField.getText());
+        pl.setKtp(noKtp); 
+        
+        noHp = String.valueOf(HPField.getText());
+        pl.setNoHP(noHp);
+    }//GEN-LAST:event_NextButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,17 +256,14 @@ public class PesanMiniBus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> AsalBox;
     private javax.swing.JButton BackButton;
     private javax.swing.JTextField HPField;
     private javax.swing.JTextField KTPField;
-    private javax.swing.JTextField KetField;
     private javax.swing.JTextField NamaField;
     private javax.swing.JButton NextButton;
-    private javax.swing.JComboBox<String> TujuanBox;
-    private javax.swing.JComboBox<String> WaktuBox;
+    private javax.swing.JComboBox<String> Tujuan;
+    private javax.swing.JComboBox<String> Waktu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

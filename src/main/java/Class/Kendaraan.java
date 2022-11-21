@@ -29,14 +29,19 @@ public class Kendaraan  implements Struk
         this.ketTempat = k;
     } 
     
+    public String getAsal(){
+        return this.asal;
+    }
+    
+    public void setAsal(String asal){
+        this.asal = asal;
+    }
+    
     @Override
     public String getTujuan(){
         return this.tujuan; 
     }
     
-    public String getAsal(){
-        return this.asal;
-    }
     public void setTujuan(String tujuan){
         this.tujuan = tujuan;
     }

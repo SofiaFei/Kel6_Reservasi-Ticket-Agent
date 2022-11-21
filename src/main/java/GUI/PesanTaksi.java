@@ -4,16 +4,21 @@
  */
 package GUI;
 
+import Class.Kendaraan;
+import Class.Taksi;
+import Class.Pelanggan;
+
 /**
  *
  * @author romaf
  */
-public class PesanTaxi extends javax.swing.JFrame {
-
+public class PesanTaksi extends javax.swing.JFrame {
+    
+    private Kendaraan taksi = new Taksi();
     /**
      * Creates new form DataTaxi
      */
-    public PesanTaxi() {
+    public PesanTaksi() {
         initComponents();
     }
 
@@ -29,13 +34,10 @@ public class PesanTaxi extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        AsalBox = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        TujuanBox = new javax.swing.JComboBox<>();
-        WaktuBox = new javax.swing.JComboBox<>();
+        Tujuan = new javax.swing.JComboBox<>();
+        Waktu = new javax.swing.JComboBox<>();
         NextButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        KetField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         NamaField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -43,6 +45,7 @@ public class PesanTaxi extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         HPField = new javax.swing.JTextField();
         KTPField = new javax.swing.JTextField();
+        Asal = new javax.swing.JComboBox<>();
 
         jLabel2.setText("Keterangan : ");
 
@@ -55,26 +58,18 @@ public class PesanTaxi extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(170, 20, 90, 17);
 
-        AsalBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
-        AsalBox.addActionListener(new java.awt.event.ActionListener() {
+        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
+        Tujuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalBoxActionPerformed(evt);
+                TujuanActionPerformed(evt);
             }
         });
-        jPanel1.add(AsalBox);
-        AsalBox.setBounds(30, 190, 110, 22);
+        jPanel1.add(Tujuan);
+        Tujuan.setBounds(30, 240, 110, 22);
 
-        jLabel4.setText("Keterangan Penjemputan :");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 230, 150, 16);
-
-        TujuanBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
-        jPanel1.add(TujuanBox);
-        TujuanBox.setBounds(30, 360, 110, 22);
-
-        WaktuBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
-        jPanel1.add(WaktuBox);
-        WaktuBox.setBounds(30, 400, 72, 22);
+        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
+        jPanel1.add(Waktu);
+        Waktu.setBounds(30, 280, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,8 +77,13 @@ public class PesanTaxi extends javax.swing.JFrame {
                 NextButtonMouseClicked(evt);
             }
         });
+        NextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 470, 70, 22);
+        NextButton.setBounds(290, 350, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,9 +97,7 @@ public class PesanTaxi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 470, 72, 22);
-        jPanel1.add(KetField);
-        KetField.setBounds(30, 250, 300, 100);
+        BackButton.setBounds(50, 350, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -157,6 +155,15 @@ public class PesanTaxi extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 40, 270, 140);
 
+        Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
+        Asal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Asal);
+        Asal.setBounds(30, 200, 110, 22);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -171,10 +178,6 @@ public class PesanTaxi extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AsalBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AsalBoxActionPerformed
-
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BackButtonActionPerformed
@@ -186,7 +189,8 @@ public class PesanTaxi extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
-    StrukTaxi struk = new StrukTaxi();
+    String convert = String.valueOf(taksi.getHarga());
+    TampilanStruk struk = new TampilanStruk(taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
@@ -194,6 +198,77 @@ public class PesanTaxi extends javax.swing.JFrame {
     private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NamaFieldActionPerformed
+
+    private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+    Pelanggan pl = new Pelanggan();
+        String nama, noKtp, noHp;
+        if(Asal.getSelectedItem().equals("Asal") && Tujuan.getSelectedItem().equals("Tujuan")){
+            taksi.setHarga(0);
+        } else if(Asal.getSelectedItem().equals("Darussalam") && Tujuan.getSelectedItem().equals("Darussalam")){
+            taksi.setHarga(10000);
+            taksi.setAsal("Darussalam");
+            taksi.setTujuan("Darussalam");
+        } else if(Asal.getSelectedItem().equals("Darussalam") && Tujuan.getSelectedItem().equals("Batoh")){
+            taksi.setHarga(40000);
+            taksi.setAsal("Darussalam");
+            taksi.setTujuan("Batoh");
+        } else if(Asal.getSelectedItem().equals("Darussalam") && Tujuan.getSelectedItem().equals("Peunayong")){
+            taksi.setHarga(30000);
+            taksi.setAsal("Darussalam");
+            taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Darussalam")){
+            taksi.setHarga(40000);
+            taksi.setAsal("Batoh");
+            taksi.setTujuan("Darussalam");
+        } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Batoh")){
+            taksi.setHarga(10000);
+            taksi.setAsal("Batoh");
+            taksi.setTujuan("Batoh");
+        } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Peunayong")){
+            taksi.setHarga(20000);
+            taksi.setAsal("Batoh");
+            taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Darussalam")){
+            taksi.setHarga(30000);
+            taksi.setAsal("Peunayong");
+            taksi.setTujuan("Darussalam");
+        } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Batoh")){
+            taksi.setHarga(20000);
+            taksi.setAsal("Peunayong");
+            taksi.setTujuan("Batoh");
+        } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Peunayong")){
+            taksi.setHarga(10000);
+            taksi.setAsal("Peunayong");
+            taksi.setTujuan("Peunayong");
+        }
+        
+        if(Waktu.getSelectedItem().equals("Waktu")){
+            taksi.setWaktu("");
+        } else if(Waktu.getSelectedItem().equals("08:00")){
+            taksi.setWaktu("08:00");
+        } else if(Waktu.getSelectedItem().equals("12:00")){
+            taksi.setWaktu("12:00");
+        } else if(Waktu.getSelectedItem().equals("20:00")){
+            taksi.setWaktu("20:00");
+        }
+    
+        nama = String.valueOf(NamaField.getText());
+        pl.setNama(nama);
+    
+        noKtp = String.valueOf(KTPField.getText());
+        pl.setKtp(noKtp); 
+        
+        noHp = String.valueOf(HPField.getText());
+        pl.setNoHP(noHp);
+    }//GEN-LAST:event_NextButtonActionPerformed
+
+    private void AsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AsalActionPerformed
+
+    private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TujuanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,39 +287,39 @@ public class PesanTaxi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PesanTaxi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanTaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PesanTaxi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanTaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PesanTaxi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanTaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PesanTaxi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanTaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PesanTaxi().setVisible(true);
+                new PesanTaksi().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> AsalBox;
+    private javax.swing.JComboBox<String> Asal;
     private javax.swing.JButton BackButton;
     private javax.swing.JTextField HPField;
     private javax.swing.JTextField KTPField;
-    private javax.swing.JTextField KetField;
     private javax.swing.JTextField NamaField;
     private javax.swing.JButton NextButton;
-    private javax.swing.JComboBox<String> TujuanBox;
-    private javax.swing.JComboBox<String> WaktuBox;
+    private javax.swing.JComboBox<String> Tujuan;
+    private javax.swing.JComboBox<String> Waktu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

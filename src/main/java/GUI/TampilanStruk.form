@@ -111,9 +111,12 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="HargaField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="140" y="150" width="150" height="-1"/>
+              <AbsoluteConstraints x="140" y="190" width="150" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -123,7 +126,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="150" width="70" height="20"/>
+              <AbsoluteConstraints x="30" y="190" width="70" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -153,9 +156,6 @@
         <Component class="javax.swing.JTextField" name="AsalField">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="tkt.getAsal()" type="code"/>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AsalFieldActionPerformed"/>
@@ -191,12 +191,15 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="WaktuField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WaktuFieldActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="140" y="190" width="150" height="-1"/>
+              <AbsoluteConstraints x="140" y="150" width="150" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -206,7 +209,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="190" width="70" height="-1"/>
+              <AbsoluteConstraints x="30" y="150" width="70" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

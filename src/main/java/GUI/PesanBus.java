@@ -15,6 +15,7 @@ import Class.Pelanggan;
  */
 public class PesanBus extends javax.swing.JFrame {
 
+    private Kendaraan bus = new Bus();
     public PesanBus() {
         initComponents();
     }
@@ -79,6 +80,11 @@ public class PesanBus extends javax.swing.JFrame {
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 NextButtonMouseClicked(evt);
+            }
+        });
+        NextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextButtonActionPerformed(evt);
             }
         });
         jPanel1.add(NextButton);
@@ -181,11 +187,7 @@ public class PesanBus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-    Pelanggan pl = new Pelanggan();
-    String nama;
     
-    nama = String.valueOf(NamaField.getText());
-    pl.setNama(nama);
     }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -199,45 +201,45 @@ public class PesanBus extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
-    StrukBus struk = new StrukBus();
+    String convert = String.valueOf(bus.getHarga());
+    TampilanStruk struk = new TampilanStruk(bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
 
     private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-    Kendaraan bus = new Bus();
-        if(Tujuan.getSelectedItem().equals("Tujuan")){
-            buttonGroup1.clearSelection();
-            bus.setHarga(0);
-        } else if(Tujuan.getSelectedItem().equals("Medan")){
-            bus.setHarga(200000);
-        } else if(Tujuan.getSelectedItem().equals("Padang")){
-            bus.setHarga(400000);
-        } else if(Tujuan.getSelectedItem().equals("Riau")){
-            bus.setHarga(500000);
-        }
+    
     }//GEN-LAST:event_TujuanActionPerformed
 
     private void HPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPFieldActionPerformed
-        Pelanggan pl = new Pelanggan();
-        String noHp;
-    
-        noHp = String.valueOf(HPField.getText());
-        pl.setNoHP(noHp);
+
     }//GEN-LAST:event_HPFieldActionPerformed
 
     private void KTPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KTPFieldActionPerformed
-        Pelanggan pl = new Pelanggan();
-        String noKtp;
-    
-        noKtp = String.valueOf(KTPField.getText());
-        pl.setKtp(noKtp); 
+
     }//GEN-LAST:event_KTPFieldActionPerformed
 
     private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
-        Kendaraan bus = new Bus();
+  
+    }//GEN-LAST:event_WaktuActionPerformed
+
+    private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        Pelanggan pl = new Pelanggan();
+        String nama, noKtp, noHp;
+        if(Tujuan.getSelectedItem().equals("Tujuan")){
+            bus.setHarga(0);
+        } else if(Tujuan.getSelectedItem().equals("Medan")){
+            bus.setHarga(200000);
+            bus.setTujuan("Medan");
+        } else if(Tujuan.getSelectedItem().equals("Padang")){
+            bus.setHarga(400000);
+            bus.setTujuan("Padang");
+        } else if(Tujuan.getSelectedItem().equals("Riau")){
+            bus.setHarga(500000);
+            bus.setTujuan("Riau");
+        }
+        
         if(Waktu.getSelectedItem().equals("Waktu")){
-            buttonGroup1.clearSelection();
             bus.setWaktu("");
         } else if(Waktu.getSelectedItem().equals("08:00")){
             bus.setWaktu("08:00");
@@ -246,7 +248,16 @@ public class PesanBus extends javax.swing.JFrame {
         } else if(Waktu.getSelectedItem().equals("20:00")){
             bus.setWaktu("20:00");
         }
-    }//GEN-LAST:event_WaktuActionPerformed
+    
+        nama = String.valueOf(NamaField.getText());
+        pl.setNama(nama);
+    
+        noKtp = String.valueOf(KTPField.getText());
+        pl.setKtp(noKtp); 
+        
+        noHp = String.valueOf(HPField.getText());
+        pl.setNoHP(noHp);
+    }//GEN-LAST:event_NextButtonActionPerformed
 
     /**
      * @param args the command line arguments

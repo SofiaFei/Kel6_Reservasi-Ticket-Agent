@@ -14,14 +14,29 @@ import Class.Pelanggan;
  *
  * @author romaf
  */
-public class StrukBus extends javax.swing.JFrame {
-static Tiket txt;
+public class TampilanStruk extends javax.swing.JFrame {
+private String asal;
+private String tujuan;
+private String waktu;
+private String harga;
     /**
      * Creates new form DataHargaBus
      */
-    public StrukBus() {
+     public TampilanStruk() {
         initComponents();
-        this.tkt = new Tiket();
+    }
+     
+    public TampilanStruk(String asal, String tujuan, String waktu, String harga) {
+        initComponents();
+        this.asal= asal;
+        this.tujuan= tujuan;
+        this.waktu= waktu;
+        this.harga= harga;
+        
+        AsalField.setText(this.asal);
+        TujuanField.setText(this.tujuan);
+        WaktuField.setText(this.waktu);
+        HargaField.setText(this.harga);
     }
 
     /**
@@ -90,12 +105,14 @@ static Tiket txt;
         });
         jPanel1.add(BackButton);
         BackButton.setBounds(60, 240, 80, 20);
+
+        HargaField.setEditable(false);
         jPanel1.add(HargaField);
-        HargaField.setBounds(140, 150, 150, 22);
+        HargaField.setBounds(140, 190, 150, 22);
 
         jLabel3.setText("Harga         :");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 150, 70, 20);
+        jLabel3.setBounds(30, 190, 70, 20);
 
         jLabel2.setText("Tujuan        :");
         jPanel1.add(jLabel2);
@@ -111,7 +128,6 @@ static Tiket txt;
         TujuanField.setBounds(140, 110, 150, 22);
 
         AsalField.setEditable(false);
-        AsalField.setText(tkt.getAsal());
         AsalField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AsalFieldActionPerformed(evt);
@@ -134,17 +150,18 @@ static Tiket txt;
         jPanel1.add(jLabel6);
         jLabel6.setBounds(130, 30, 70, 17);
 
+        WaktuField.setEditable(false);
         WaktuField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 WaktuFieldActionPerformed(evt);
             }
         });
         jPanel1.add(WaktuField);
-        WaktuField.setBounds(140, 190, 150, 22);
+        WaktuField.setBounds(140, 150, 150, 22);
 
         jLabel5.setText("Waktu        :");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 190, 70, 16);
+        jLabel5.setBounds(30, 150, 70, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -161,20 +178,8 @@ static Tiket txt;
     }// </editor-fold>//GEN-END:initComponents
 
     private void AsalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalFieldActionPerformed
-        // Tiket tkt = new Tiket();
-        // AsalField.setText("" + tkt.getAsal());
     }//GEN-LAST:event_AsalFieldActionPerformed
-    
-    public static String cetakAsal(){
-        Tiket tkt = new Tiket();
-        return tkt.getAsal();
-    }
-    
-    public static String cetakTujuan(){
-        Tiket tkt = new Tiket();
-        return tkt.getTujuan();
-    }
-    
+
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     PesanBus bus = new PesanBus();
     bus.setVisible(true);
@@ -192,19 +197,11 @@ static Tiket txt;
     }//GEN-LAST:event_WaktuFieldActionPerformed
 
     private void AsalFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AsalFieldKeyReleased
-        // Tiket tkt = new Tiket();
-        // AsalField.setText("" + tkt.getAsal());
-        
-        // Kendaraan bus = new Bus();
-        // AsalField.setText("" +bus.getAsal());
+
     }//GEN-LAST:event_AsalFieldKeyReleased
 
     private void TujuanFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TujuanFieldKeyReleased
-        Tiket tkt = new Tiket();
-        TujuanField.setText("" + tkt.getTujuan());
-        
-        // Kendaraan bus = new Bus();
-        // TujuanField.setText("" +bus.getTujuan());
+
     }//GEN-LAST:event_TujuanFieldKeyReleased
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -228,21 +225,23 @@ static Tiket txt;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StrukBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StrukBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StrukBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StrukBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StrukBus().setVisible(true);
+                new TampilanStruk().setVisible(true);
             }
         });
     }

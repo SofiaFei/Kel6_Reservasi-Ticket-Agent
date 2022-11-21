@@ -13,6 +13,8 @@ package Class;
  */
 public class Taksi extends Kendaraan
 {
+    public Taksi(){}
+    
     public Taksi (String t, int h, String k){
         super(t, h, k);
     }
