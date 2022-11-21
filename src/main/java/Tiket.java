@@ -11,29 +11,27 @@
  * @version (11-11-2022)
  * @since (10-10-2022)
  */
-public class Tiket
+public class Tiket implements Struk
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Tiket
-     */
-    public Tiket()
+    private String asal;
+    private int harga;
+    private String tujuan;
+    
+    @Override
+    public String getAsal()
     {
-        // initialise instance variables
-        x = 0;
+        return this.asal;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    @Override
+    public int getHarga()
     {
-        // put your code here
-        return x + y;
+        return this.harga;
+    }
+    
+    @Override
+    public String getTujuan()
+    {
+        return this.tujuan;
     }
 }

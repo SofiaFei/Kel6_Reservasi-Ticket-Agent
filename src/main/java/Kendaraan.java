@@ -10,7 +10,7 @@
  * @version (11-11-2022)
  * @since (10-10-2022)
  */
-public class Kendaraan
+public class Kendaraan  implements Struk
 {
     
     private String asal;
@@ -25,6 +25,7 @@ public class Kendaraan
         this.ketTempat = k;
     } 
     
+    @Override
     public String getAsal(){
         return this.asal;
     }
@@ -33,6 +34,7 @@ public class Kendaraan
         this.asal = asal;
     }
     
+    @Override
     public String getTujuan(){
         return this.tujuan; 
     }
@@ -41,6 +43,7 @@ public class Kendaraan
         this.tujuan = tujuan;
     }
     
+    @Override
     public int getHarga(){
         return this.harga; 
     }
