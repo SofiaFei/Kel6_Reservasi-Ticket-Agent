@@ -1,4 +1,4 @@
-
+package Class;
 /**
  * Write a description of class Struk here.
  *
