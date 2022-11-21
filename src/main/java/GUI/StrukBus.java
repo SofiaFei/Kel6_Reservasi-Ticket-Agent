@@ -4,6 +4,12 @@
  */
 package GUI;
 
+import Class.Struk;
+import Class.Tiket;
+import Class.Kendaraan;
+import Class.Bus;
+import Class.Pelanggan;
+
 /**
  *
  * @author romaf
@@ -40,6 +46,8 @@ public class StrukBus extends javax.swing.JFrame {
         AsalField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        WaktuField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
@@ -86,12 +94,23 @@ public class StrukBus extends javax.swing.JFrame {
         jLabel2.setText("Tujuan        :");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 110, 70, 20);
+
+        TujuanField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                TujuanFieldKeyReleased(evt);
+            }
+        });
         jPanel1.add(TujuanField);
         TujuanField.setBounds(140, 110, 150, 22);
 
         AsalField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AsalFieldActionPerformed(evt);
+            }
+        });
+        AsalField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                AsalFieldKeyReleased(evt);
             }
         });
         jPanel1.add(AsalField);
@@ -105,6 +124,18 @@ public class StrukBus extends javax.swing.JFrame {
         jLabel6.setText("Struk Bus");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(130, 30, 70, 17);
+
+        WaktuField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WaktuFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(WaktuField);
+        WaktuField.setBounds(140, 190, 150, 22);
+
+        jLabel5.setText("Waktu        :");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(30, 190, 70, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,10 +162,30 @@ public class StrukBus extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Tiket tiket = new Tiket();
+    Ticket tiket = new Ticket();
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
+
+    private void WaktuFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WaktuFieldActionPerformed
+
+    private void AsalFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AsalFieldKeyReleased
+        // Tiket tkt = new Tiket();
+        // AsalField.setText("" + tkt.getAsal());
+        
+        Kendaraan bus = new Bus();
+        AsalField.setText("" +bus.getAsal());
+    }//GEN-LAST:event_AsalFieldKeyReleased
+
+    private void TujuanFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TujuanFieldKeyReleased
+        // Tiket tkt = new Tiket();
+        // TujuanField.setText("" + tkt.getTujuan());
+        
+        Kendaraan bus = new Bus();
+        TujuanField.setText("" +bus.getTujuan());
+    }//GEN-LAST:event_TujuanFieldKeyReleased
 
     /**
      * @param args the command line arguments
@@ -178,6 +229,7 @@ public class StrukBus extends javax.swing.JFrame {
     private javax.swing.JButton ConfirmButton;
     private javax.swing.JTextField HargaField;
     private javax.swing.JTextField TujuanField;
+    private javax.swing.JTextField WaktuField;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -185,6 +237,7 @@ public class StrukBus extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

@@ -14,7 +14,7 @@ package Class;
 public class Pelanggan
 {
     private String nama;
-    private int ktp;
+    private String ktp;
     private String noHP;
     
     /**
@@ -31,7 +31,7 @@ public class Pelanggan
      * @param nama nama dari pelanggan
      * @param ktp  ktp dari pelanggan
      */
-    public Pelanggan(String nama, int ktp) {
+    public Pelanggan(String nama, String ktp) {
         this.nama = nama;
         this.ktp = ktp;
     }
@@ -59,7 +59,7 @@ public class Pelanggan
      *
      * @return ktp int yang merepresentasikan ktp pelanggan
      */
-    public int getKtp() {
+    public String getKtp() {
         return this.ktp;
     }
 
@@ -68,7 +68,7 @@ public class Pelanggan
      *
      * @param ktpbaru ktp baru dari pelanggan
      */
-    public void setKtp(int ktpbaru) {
+    public void setKtp(String ktpbaru) {
         this.ktp = ktpbaru;
     }
     

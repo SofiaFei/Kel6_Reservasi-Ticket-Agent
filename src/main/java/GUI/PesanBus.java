@@ -7,6 +7,7 @@ package GUI;
 
 import Class.Kendaraan;
 import Class.Bus;
+import Class.Pelanggan;
 
 /**
  *
@@ -33,7 +34,7 @@ public class PesanBus extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Tujuan = new javax.swing.JComboBox<>();
-        WaktuBox = new javax.swing.JComboBox<>();
+        Waktu = new javax.swing.JComboBox<>();
         NextButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -65,9 +66,14 @@ public class PesanBus extends javax.swing.JFrame {
         jPanel1.add(Tujuan);
         Tujuan.setBounds(30, 200, 110, 22);
 
-        WaktuBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
-        jPanel1.add(WaktuBox);
-        WaktuBox.setBounds(30, 240, 72, 22);
+        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
+        Waktu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WaktuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Waktu);
+        Waktu.setBounds(30, 240, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -105,6 +111,18 @@ public class PesanBus extends javax.swing.JFrame {
         jLabel3.setText("No KTP :");
 
         jLabel5.setText("No HP :");
+
+        HPField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HPFieldActionPerformed(evt);
+            }
+        });
+
+        KTPField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KTPFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -163,7 +181,11 @@ public class PesanBus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-        // TODO add your handling code here:
+    Pelanggan pl = new Pelanggan();
+    String nama;
+    
+    nama = String.valueOf(NamaField.getText());
+    pl.setNama(nama);
     }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -183,7 +205,7 @@ public class PesanBus extends javax.swing.JFrame {
     }//GEN-LAST:event_NextButtonMouseClicked
 
     private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-        Kendaraan bus = new Bus();
+    Kendaraan bus = new Bus();
         if(Tujuan.getSelectedItem().equals("Tujuan")){
             buttonGroup1.clearSelection();
             bus.setHarga(0);
@@ -195,6 +217,36 @@ public class PesanBus extends javax.swing.JFrame {
             bus.setHarga(500000);
         }
     }//GEN-LAST:event_TujuanActionPerformed
+
+    private void HPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPFieldActionPerformed
+        Pelanggan pl = new Pelanggan();
+        String noHp;
+    
+        noHp = String.valueOf(HPField.getText());
+        pl.setNoHP(noHp);
+    }//GEN-LAST:event_HPFieldActionPerformed
+
+    private void KTPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KTPFieldActionPerformed
+        Pelanggan pl = new Pelanggan();
+        String noKtp;
+    
+        noKtp = String.valueOf(KTPField.getText());
+        pl.setKtp(noKtp); 
+    }//GEN-LAST:event_KTPFieldActionPerformed
+
+    private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
+        Kendaraan bus = new Bus();
+        if(Waktu.getSelectedItem().equals("Waktu")){
+            buttonGroup1.clearSelection();
+            bus.setWaktu("");
+        } else if(Waktu.getSelectedItem().equals("08:00")){
+            bus.setWaktu("08:00");
+        } else if(Waktu.getSelectedItem().equals("12:00")){
+            bus.setWaktu("12:00");
+        } else if(Waktu.getSelectedItem().equals("20:00")){
+            bus.setWaktu("20:00");
+        }
+    }//GEN-LAST:event_WaktuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,7 +291,7 @@ public class PesanBus extends javax.swing.JFrame {
     private javax.swing.JTextField NamaField;
     private javax.swing.JButton NextButton;
     private javax.swing.JComboBox<String> Tujuan;
-    private javax.swing.JComboBox<String> WaktuBox;
+    private javax.swing.JComboBox<String> Waktu;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;

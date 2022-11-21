@@ -36,6 +36,8 @@ public class StrukMiniBus extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        WaktuField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +93,18 @@ public class StrukMiniBus extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(130, 30, 120, 17);
 
+        WaktuField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WaktuFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(WaktuField);
+        WaktuField.setBounds(140, 190, 150, 22);
+
+        jLabel5.setText("Waktu        :");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(30, 190, 70, 16);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,10 +130,14 @@ public class StrukMiniBus extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Tiket tiket = new Tiket();
+    Ticket tiket = new Ticket();
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
+
+    private void WaktuFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WaktuFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,10 +181,12 @@ public class StrukMiniBus extends javax.swing.JFrame {
     private javax.swing.JButton ConfirmButton;
     private javax.swing.JTextField HargaField;
     private javax.swing.JTextField TujuanField;
+    private javax.swing.JTextField WaktuField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -8,17 +8,19 @@ package Class;
  * @author (Putri Ulfayani (2108107010004)
  * @author (Siti Nurrahmasita(2108107010015)
  *
- * @version (11-11-2022)
+ * @version (11-11-2022)   
  * @since (10-10-2022)
  */
 public class Kendaraan  implements Struk
 {
+    private String asal;
     private String tujuan;
     private String ketTempat;
+    private String waktu;
     private int harga;
     
     public Kendaraan(){
-        
+        this.asal = "Banda Aceh";
     }
     
     public Kendaraan(String t, int h, String k){
@@ -32,6 +34,9 @@ public class Kendaraan  implements Struk
         return this.tujuan; 
     }
     
+    public String getAsal(){
+        return this.asal;
+    }
     public void setTujuan(String tujuan){
         this.tujuan = tujuan;
     }
@@ -45,6 +50,13 @@ public class Kendaraan  implements Struk
         this.harga = harga;
     }
     
+    public String getWaktu(){
+        return this.waktu;
+    }
+    
+    public void setWaktu(String waktu){
+        this.waktu = waktu;
+    }
     public String getketTempat(){
         return this.ketTempat; 
     }

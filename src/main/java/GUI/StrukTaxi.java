@@ -29,13 +29,15 @@ public class StrukTaxi extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         ConfirmButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        HargaField = new javax.swing.JTextField();
+        WaktuField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         TujuanField = new javax.swing.JTextField();
         AsalField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        HargaField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +63,14 @@ public class StrukTaxi extends javax.swing.JFrame {
         });
         jPanel1.add(BackButton);
         BackButton.setBounds(60, 240, 80, 20);
-        jPanel1.add(HargaField);
-        HargaField.setBounds(140, 150, 150, 22);
+
+        WaktuField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WaktuFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(WaktuField);
+        WaktuField.setBounds(140, 190, 150, 22);
 
         jLabel3.setText("Harga         :");
         jPanel1.add(jLabel3);
@@ -91,6 +99,12 @@ public class StrukTaxi extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(150, 30, 80, 17);
 
+        jLabel1.setText("Waktu        :");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(30, 190, 70, 16);
+        jPanel1.add(HargaField1);
+        HargaField1.setBounds(140, 150, 150, 22);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,10 +130,14 @@ public class StrukTaxi extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Tiket tiket = new Tiket();
+    Ticket tiket = new Ticket();
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
+
+    private void WaktuFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WaktuFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,8 +179,10 @@ public class StrukTaxi extends javax.swing.JFrame {
     private javax.swing.JTextField AsalField;
     private javax.swing.JButton BackButton;
     private javax.swing.JButton ConfirmButton;
-    private javax.swing.JTextField HargaField;
+    private javax.swing.JTextField HargaField1;
     private javax.swing.JTextField TujuanField;
+    private javax.swing.JTextField WaktuField;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

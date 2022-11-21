@@ -7,6 +7,8 @@ package Class;
  */
 public interface Struk
 {
-    public int getHarga();
+    public String getAsal();
     public String getTujuan();
+    public String getWaktu();
+    public int getHarga();
 }
