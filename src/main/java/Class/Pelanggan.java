@@ -18,7 +18,7 @@ public class Pelanggan
     private String noHP;
     
     /**
-     * Constructor for objects of class Pelanggan
+     * Constructor for objects of class Pelanggan.
      */
     public Pelanggan()
     {
@@ -26,62 +26,69 @@ public class Pelanggan
     }
 
     /**
-     * Constructor untuk membuat Pelanggan baru dengan parameter
-     * 
-     * @param nama nama dari pelanggan
-     * @param ktp  ktp dari pelanggan
+     * Constructor untuk membuat Pelanggan baru dengan parameter.
+     * @param nama nama dari pelanggan.
+     * @param ktp  ktp dari pelanggan.
+     * @param noHP nomor hp dari pelanggan.
      */
-    public Pelanggan(String nama, String ktp) {
+    public Pelanggan(String nama, String ktp, String noHP) 
+    {
         this.nama = nama;
         this.ktp = ktp;
+        this.noHP =noHP;
     }
 
     /**
-     * Method ini berfungsi untuk mengembalikan nama dari pelanggan
-     *
-     * @return nama String yang merepresentasikan nama pelanggan
+     * getNama berfungsi untuk mengembalikan nama dari pelanggan.
+     * @return nama String yang merepresentasikan nama pelanggan.
      */
-    public String getNama() {
+    public String getNama() 
+    {
         return this.nama;
     }
 
     /**
-     * Method ini berfungsi untuk menetapkan nama dari pelanggan
-     *
-     * @param namabaru nama baru dari pelanggan
+     * setNama berfungsi untuk menetapkan nama dari pelanggan.
+     * @param namaBaru nama baru dari pelanggan.
      */
-    public void setNama(String namabaru) {
-        this.nama = namabaru;
+    public void setNama(String namaBaru) 
+    {
+        this.nama = namaBaru;
     }
 
     /**
-     * Method ini berfungsi untuk mengembalikan ktp dari pelanggan
-     *
-     * @return ktp int yang merepresentasikan ktp pelanggan
+     * getKtp berfungsi untuk mengembalikan ktp dari pelanggan.
+     * @return ktp String yang merepresentasikan ktp pelanggan.
      */
-    public String getKtp() {
+    public String getKtp() 
+    {
         return this.ktp;
     }
 
     /**
-     * Method ini berfungsi untuk menetapkan ktp dari pelanggan
-     *
-     * @param ktpbaru ktp baru dari pelanggan
+     * setKtp berfungsi untuk menetapkan ktp dari pelanggan.
+     * @param ktpBaru ktp baru dari pelanggan.
      */
-    public void setKtp(String ktpbaru) {
-        this.ktp = ktpbaru;
+    public void setKtp(String ktpBaru) 
+    {
+        this.ktp = ktpBaru;
     }
     
-    public String getNoHP() {
+    /**
+     * getNoHP berfungsi untuk mengembalikan nomor HP dari pelanggan.
+     * @return noHP String yang merepresentasikan nomor HP pelanggan.
+     */
+    public String getNoHP() 
+    {
         return this.noHP;
     }
 
     /**
-     * Method ini berfungsi untuk menetapkan ktp dari pelanggan
-     *
-     * @param ktpbaru ktp baru dari pelanggan
+     * setNoHP berfungsi untuk menetapkan nomor HP dari pelanggan.
+     * @param noHP String nomor HP baru dari pelanggan.
      */
-    public void setNoHP(String noHP) {
+    public void setNoHP(String noHP) 
+    {
         this.noHP = noHP;
     }
 }
