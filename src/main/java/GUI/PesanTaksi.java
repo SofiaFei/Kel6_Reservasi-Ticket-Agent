@@ -65,11 +65,11 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(30, 240, 110, 22);
+        Tujuan.setBounds(30, 260, 110, 22);
 
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         jPanel1.add(Waktu);
-        Waktu.setBounds(30, 280, 72, 22);
+        Waktu.setBounds(30, 300, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,7 +83,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 350, 70, 22);
+        NextButton.setBounds(290, 370, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,7 +97,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 350, 72, 22);
+        BackButton.setBounds(50, 370, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -149,11 +149,11 @@ public class PesanTaksi extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 40, 270, 140);
+        jPanel2.setBounds(40, 40, 270, 150);
 
         Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
         Asal.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +162,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Asal);
-        Asal.setBounds(30, 200, 110, 22);
+        Asal.setBounds(30, 220, 110, 22);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,7 +190,7 @@ public class PesanTaksi extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(taksi.getHarga());
-    TampilanStruk struk = new TampilanStruk(taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
+    TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked

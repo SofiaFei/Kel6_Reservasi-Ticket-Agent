@@ -8,13 +8,15 @@ import Class.Struk;
 import Class.Tiket;
 import Class.Kendaraan;
 import Class.Bus;
-import Class.Pelanggan;
 
 /**
  *
  * @author romaf
  */
 public class TampilanStruk extends javax.swing.JFrame {
+private String nama;
+private String noKtp;
+private String noHp;
 private String asal;
 private String tujuan;
 private String waktu;
@@ -22,12 +24,15 @@ private String harga;
     /**
      * Creates new form DataHargaBus
      */
-     public TampilanStruk() {
+    public TampilanStruk() {
         initComponents();
     }
      
-    public TampilanStruk(String asal, String tujuan, String waktu, String harga) {
+    public TampilanStruk(String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
+        this.nama= nama;
+        this.noKtp= noKtp;
+        this.noHp= noHp;
         this.asal= asal;
         this.tujuan= tujuan;
         this.waktu= waktu;
@@ -89,7 +94,7 @@ private String harga;
             }
         });
         jPanel1.add(ConfirmButton);
-        ConfirmButton.setBounds(260, 240, 70, 20);
+        ConfirmButton.setBounds(230, 240, 70, 20);
 
         BackButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         BackButton.setText("Back");
@@ -181,13 +186,13 @@ private String harga;
     }//GEN-LAST:event_AsalFieldActionPerformed
 
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
-    PesanBus bus = new PesanBus();
-    bus.setVisible(true);
+    Menu menu = new Menu();
+    menu.setVisible(true);
     dispose();
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Ticket tiket = new Ticket();
+    Ticket tiket = new Ticket(this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked

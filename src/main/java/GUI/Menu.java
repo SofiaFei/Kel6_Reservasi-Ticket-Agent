@@ -102,7 +102,7 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
         );
 
         pack();
@@ -125,7 +125,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_TaxiButtonMouseClicked
 
     private void BusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BusButtonMouseClicked
-    PesanBus bus = new PesanBus();
+    PesanBuss bus = new PesanBuss();
     bus.setVisible(true);
     dispose();
     }//GEN-LAST:event_BusButtonMouseClicked
@@ -164,6 +164,7 @@ public class Menu extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Menu().setVisible(true);
             }

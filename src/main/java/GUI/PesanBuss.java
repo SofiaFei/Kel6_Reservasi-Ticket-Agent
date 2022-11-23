@@ -1,4 +1,3 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -11,12 +10,15 @@ import Class.Pelanggan;
 
 /**
  *
- * @author romaf
+ * @author sofia
  */
-public class PesanBus extends javax.swing.JFrame {
+public class PesanBuss extends javax.swing.JFrame {
 
+    /**
+     * Creates new form PesanBuss
+     */
     private Kendaraan bus = new Bus();
-    public PesanBus() {
+    public PesanBuss() {
         initComponents();
     }
 
@@ -29,9 +31,6 @@ public class PesanBus extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Tujuan = new javax.swing.JComboBox<>();
@@ -45,8 +44,6 @@ public class PesanBus extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         HPField = new javax.swing.JTextField();
         KTPField = new javax.swing.JTextField();
-
-        jTextField1.setText("No.Hp   :");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,7 +62,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(30, 200, 110, 22);
+        Tujuan.setBounds(30, 210, 110, 22);
 
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         Waktu.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +71,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Waktu);
-        Waktu.setBounds(30, 240, 72, 22);
+        Waktu.setBounds(30, 250, 72, 22);
 
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,7 +85,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(260, 310, 70, 22);
+        NextButton.setBounds(260, 320, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,7 +99,7 @@ public class PesanBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(100, 310, 72, 22);
+        BackButton.setBounds(100, 320, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -166,62 +163,42 @@ public class PesanBus extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 40, 270, 140);
+        jPanel2.setBounds(40, 40, 270, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-    
-    }//GEN-LAST:event_NamaFieldActionPerformed
-
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
-
-    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
-    Menu menu = new Menu();
-    menu.setVisible(true);
-    dispose();
-    }//GEN-LAST:event_BackButtonMouseClicked
-
-    private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
-    String convert = String.valueOf(bus.getHarga());
-    TampilanStruk struk = new TampilanStruk(bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
-    struk.setVisible(true);
-    dispose();
-    }//GEN-LAST:event_NextButtonMouseClicked
-
     private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-    
+
     }//GEN-LAST:event_TujuanActionPerformed
 
-    private void HPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPFieldActionPerformed
-
-    }//GEN-LAST:event_HPFieldActionPerformed
-
-    private void KTPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KTPFieldActionPerformed
-
-    }//GEN-LAST:event_KTPFieldActionPerformed
-
     private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
-  
+
     }//GEN-LAST:event_WaktuActionPerformed
+
+    private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
+        String convert = String.valueOf(bus.getHarga());
+        TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
+        struk.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_NextButtonMouseClicked
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         Pelanggan pl = new Pelanggan();
@@ -238,7 +215,7 @@ public class PesanBus extends javax.swing.JFrame {
             bus.setHarga(500000);
             bus.setTujuan("Riau");
         }
-        
+
         if(Waktu.getSelectedItem().equals("Waktu")){
             bus.setWaktu("");
         } else if(Waktu.getSelectedItem().equals("08:00")){
@@ -248,16 +225,38 @@ public class PesanBus extends javax.swing.JFrame {
         } else if(Waktu.getSelectedItem().equals("20:00")){
             bus.setWaktu("20:00");
         }
-    
+
         nama = String.valueOf(NamaField.getText());
         pl.setNama(nama);
-    
+
         noKtp = String.valueOf(KTPField.getText());
-        pl.setKtp(noKtp); 
-        
+        pl.setKtp(noKtp);
+
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
     }//GEN-LAST:event_NextButtonActionPerformed
+
+    private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BackButtonMouseClicked
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BackButtonActionPerformed
+
+    private void KTPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KTPFieldActionPerformed
+
+    }//GEN-LAST:event_KTPFieldActionPerformed
+
+    private void HPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPFieldActionPerformed
+
+    }//GEN-LAST:event_HPFieldActionPerformed
+
+    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
+
+    }//GEN-LAST:event_NamaFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,21 +275,20 @@ public class PesanBus extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PesanBus().setVisible(true);
+                new PesanBuss().setVisible(true);
             }
         });
     }
@@ -303,14 +301,11 @@ public class PesanBus extends javax.swing.JFrame {
     private javax.swing.JButton NextButton;
     private javax.swing.JComboBox<String> Tujuan;
     private javax.swing.JComboBox<String> Waktu;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
