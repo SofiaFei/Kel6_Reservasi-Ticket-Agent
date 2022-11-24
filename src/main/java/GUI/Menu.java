@@ -107,10 +107,10 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.add(TaxiButton);
         TaxiButton.setBounds(380, 150, 76, 21);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/5.jpeg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/5.jpeg"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(0, 0, 570, 400);
+        jLabel5.setBounds(0, 0, 580, 410);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
