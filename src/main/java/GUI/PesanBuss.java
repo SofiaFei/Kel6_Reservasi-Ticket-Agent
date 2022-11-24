@@ -195,7 +195,7 @@ public class PesanBuss extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
         String convert = String.valueOf(bus.getHarga());
-        TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
+        TampilanStruk struk = new TampilanStruk(bus,NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
         struk.setVisible(true);
         dispose();
     }//GEN-LAST:event_NextButtonMouseClicked

@@ -174,7 +174,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(mb.getHarga());
-    TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
+    TampilanStruk struk = new TampilanStruk(mb,NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked

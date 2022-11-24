@@ -21,6 +21,7 @@ private String asal;
 private String tujuan;
 private String waktu;
 private String harga;
+private Kendaraan jenis;
     /**
      * Creates new form DataHargaBus
      */
@@ -28,7 +29,7 @@ private String harga;
         initComponents();
     }
      
-    public TampilanStruk(String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public TampilanStruk(Kendaraan jenis,String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
         this.noKtp= noKtp;
@@ -37,6 +38,7 @@ private String harga;
         this.tujuan= tujuan;
         this.waktu= waktu;
         this.harga= harga;
+        this.jenis = jenis;
         
         AsalField.setText(this.asal);
         TujuanField.setText(this.tujuan);
@@ -57,6 +59,7 @@ private String harga;
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         ConfirmButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
@@ -192,7 +195,7 @@ private String harga;
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Ticket tiket = new Ticket(this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
+    Ticket tiket = new Ticket(this.jenis, this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
@@ -268,5 +271,6 @@ private String harga;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

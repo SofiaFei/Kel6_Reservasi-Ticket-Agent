@@ -15,6 +15,7 @@ package Class;
  */
 public class MiniBus extends Kendaraan
 {
+    private String nama;
     public MiniBus()
     {
         
@@ -23,5 +24,9 @@ public class MiniBus extends Kendaraan
     public MiniBus (String t, int h, String k)
     {
         super(t, h, k);
+    }
+    public String getNamaKendaraan(){
+        this.nama = "Minibus";
+        return nama;
     }
 }

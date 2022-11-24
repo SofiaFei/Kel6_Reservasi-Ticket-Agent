@@ -190,7 +190,7 @@ public class PesanTaksi extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(taksi.getHarga());
-    TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
+    TampilanStruk struk = new TampilanStruk(taksi,NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked

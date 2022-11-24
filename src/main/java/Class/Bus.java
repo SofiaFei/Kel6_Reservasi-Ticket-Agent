@@ -15,6 +15,7 @@ package Class;
  */
 public class Bus extends Kendaraan
 {
+    private String nama;
     public Bus()
     {
         
@@ -23,5 +24,10 @@ public class Bus extends Kendaraan
     public Bus (String t, int h, String k)
     {
         super(t, h, k);
+    }
+    
+    public String getNamaKendaraan(){
+        this.nama = "Bus";
+        return nama;
     }
 }
