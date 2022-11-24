@@ -29,11 +29,13 @@ public class Menu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BusButton = new javax.swing.JButton();
         MiniBusButton = new javax.swing.JButton();
         TaxiButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Mini Bus ");
@@ -43,6 +45,17 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("   Taxi");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,6 +106,11 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel1.add(TaxiButton);
         TaxiButton.setBounds(380, 150, 76, 21);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/5.jpeg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(0, 0, 570, 400);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,6 +197,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
