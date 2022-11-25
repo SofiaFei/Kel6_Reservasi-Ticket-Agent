@@ -298,11 +298,8 @@ public class PesanTaksi extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new PesanTaksi().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new PesanTaksi().setVisible(true);
         });
     }
 

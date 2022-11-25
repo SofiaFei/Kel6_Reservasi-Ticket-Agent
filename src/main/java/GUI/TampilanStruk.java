@@ -62,14 +62,14 @@ private Kendaraan jenis;
         ConfirmButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
         HargaField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Harga = new javax.swing.JLabel();
+        Tujuan = new javax.swing.JLabel();
         TujuanField = new javax.swing.JTextField();
         AsalField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Asal = new javax.swing.JLabel();
+        konfirm = new javax.swing.JLabel();
         WaktuField = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        Waktu = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
@@ -113,15 +113,15 @@ private Kendaraan jenis;
         jPanel1.add(HargaField);
         HargaField.setBounds(140, 190, 150, 22);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setText("Harga         :");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(30, 190, 70, 20);
+        Harga.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Harga.setText("Harga         :");
+        jPanel1.add(Harga);
+        Harga.setBounds(30, 190, 70, 20);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("Tujuan        :");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, 110, 70, 20);
+        Tujuan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Tujuan.setText("Tujuan        :");
+        jPanel1.add(Tujuan);
+        Tujuan.setBounds(30, 110, 70, 20);
 
         TujuanField.setEditable(false);
         jPanel1.add(TujuanField);
@@ -131,24 +131,24 @@ private Kendaraan jenis;
         jPanel1.add(AsalField);
         AsalField.setBounds(140, 70, 150, 22);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setText("Asal            :");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 70, 70, 20);
+        Asal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Asal.setText("Asal            :");
+        jPanel1.add(Asal);
+        Asal.setBounds(30, 70, 70, 20);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
-        jLabel6.setText("Konfirmasi Tiket");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(80, 20, 190, 32);
+        konfirm.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        konfirm.setText("Konfirmasi Tiket");
+        jPanel1.add(konfirm);
+        konfirm.setBounds(80, 20, 190, 32);
 
         WaktuField.setEditable(false);
         jPanel1.add(WaktuField);
         WaktuField.setBounds(140, 150, 150, 22);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel5.setText("Waktu        :");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 150, 70, 16);
+        Waktu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Waktu.setText("Waktu        :");
+        jPanel1.add(Waktu);
+        Waktu.setBounds(30, 150, 70, 16);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/6.jpg"))); // NOI18N
         jPanel1.add(jLabel8);
@@ -162,7 +162,7 @@ private Kendaraan jenis;
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,33 +217,30 @@ private Kendaraan jenis;
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new TampilanStruk().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TampilanStruk().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Asal;
     private javax.swing.JTextField AsalField;
     private javax.swing.JButton BackButton;
     private javax.swing.JButton ConfirmButton;
+    private javax.swing.JLabel Harga;
     private javax.swing.JTextField HargaField;
+    private javax.swing.JLabel Tujuan;
     private javax.swing.JTextField TujuanField;
+    private javax.swing.JLabel Waktu;
     private javax.swing.JTextField WaktuField;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel konfirm;
     // End of variables declaration//GEN-END:variables
 }

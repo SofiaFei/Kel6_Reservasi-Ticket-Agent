@@ -248,11 +248,8 @@ public class PesanMiniBus extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new PesanMiniBus().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new PesanMiniBus().setVisible(true);
         });
     }
 
