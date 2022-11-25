@@ -91,7 +91,7 @@ private Kendaraan jenis;
         jPanel1.setBackground(new java.awt.Color(204, 221, 255));
         jPanel1.setLayout(null);
 
-        ConfirmButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ConfirmButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         ConfirmButton.setText("Confirm");
         ConfirmButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,9 +99,9 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(ConfirmButton);
-        ConfirmButton.setBounds(300, 410, 70, 20);
+        ConfirmButton.setBounds(260, 400, 100, 30);
 
-        BackButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -114,16 +114,18 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(10, 410, 80, 20);
+        BackButton.setBounds(10, 400, 90, 30);
 
         HargaField.setEditable(false);
         jPanel1.add(HargaField);
         HargaField.setBounds(140, 190, 150, 22);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Harga         :");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(30, 190, 70, 20);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Tujuan        :");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 110, 70, 20);
@@ -151,14 +153,15 @@ private Kendaraan jenis;
         jPanel1.add(AsalField);
         AsalField.setBounds(140, 70, 150, 22);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Asal            :");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(30, 70, 70, 20);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel6.setText("Struk Bus");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(130, 30, 70, 17);
+        jLabel6.setBounds(120, 20, 120, 32);
 
         WaktuField.setEditable(false);
         WaktuField.addActionListener(new java.awt.event.ActionListener() {
@@ -169,6 +172,7 @@ private Kendaraan jenis;
         jPanel1.add(WaktuField);
         WaktuField.setBounds(140, 150, 150, 22);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Waktu        :");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 150, 70, 16);

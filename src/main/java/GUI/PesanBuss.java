@@ -55,11 +55,12 @@ public class PesanBuss extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
         jLabel1.setText("Data Bus  ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(170, 20, 90, 17);
+        jLabel1.setBounds(130, 10, 130, 32);
 
+        Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau" }));
         Tujuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,8 +68,9 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(30, 210, 110, 22);
+        Tujuan.setBounds(30, 210, 110, 26);
 
+        Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         Waktu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,8 +78,9 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Waktu);
-        Waktu.setBounds(30, 250, 72, 22);
+        Waktu.setBounds(30, 250, 110, 26);
 
+        NextButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,8 +93,9 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(260, 320, 70, 22);
+        NextButton.setBounds(300, 330, 80, 30);
 
+        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -104,7 +108,7 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(100, 320, 72, 22);
+        BackButton.setBounds(10, 330, 72, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -172,7 +176,7 @@ public class PesanBuss extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 40, 270, 150);
+        jPanel2.setBounds(30, 40, 270, 150);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
         jPanel1.add(jLabel4);
