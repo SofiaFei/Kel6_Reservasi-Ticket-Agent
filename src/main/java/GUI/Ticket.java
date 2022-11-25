@@ -221,7 +221,7 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(30, 220, 60, 16);
 
-        Selesai.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        Selesai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Selesai.setText("Done");
         Selesai.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -237,7 +237,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Selesai);
-        Selesai.setBounds(330, 442, 90, 30);
+        Selesai.setBounds(310, 420, 90, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);

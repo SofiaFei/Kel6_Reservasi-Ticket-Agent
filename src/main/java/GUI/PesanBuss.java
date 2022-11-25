@@ -55,7 +55,7 @@ public class PesanBuss extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Data Bus  ");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(130, 10, 130, 32);
@@ -80,7 +80,7 @@ public class PesanBuss extends javax.swing.JFrame {
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 250, 110, 26);
 
-        NextButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        NextButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,9 +93,9 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(300, 330, 80, 30);
+        NextButton.setBounds(240, 310, 80, 30);
 
-        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -108,7 +108,7 @@ public class PesanBuss extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(10, 330, 72, 31);
+        BackButton.setBounds(60, 310, 80, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -172,7 +172,7 @@ public class PesanBuss extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);

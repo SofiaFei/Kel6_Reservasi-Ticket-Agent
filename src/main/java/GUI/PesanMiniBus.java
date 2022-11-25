@@ -66,7 +66,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 250, 110, 26);
 
-        NextButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        NextButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,9 +79,9 @@ public class PesanMiniBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(320, 340, 80, 31);
+        NextButton.setBounds(270, 310, 80, 31);
 
-        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -94,7 +94,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(10, 340, 72, 30);
+        BackButton.setBounds(50, 310, 72, 30);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 

@@ -91,7 +91,7 @@ private Kendaraan jenis;
         jPanel1.setBackground(new java.awt.Color(204, 221, 255));
         jPanel1.setLayout(null);
 
-        ConfirmButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        ConfirmButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ConfirmButton.setText("Confirm");
         ConfirmButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,9 +99,9 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(ConfirmButton);
-        ConfirmButton.setBounds(260, 400, 100, 30);
+        ConfirmButton.setBounds(240, 330, 100, 30);
 
-        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -114,7 +114,7 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(10, 400, 90, 30);
+        BackButton.setBounds(40, 330, 90, 30);
 
         HargaField.setEditable(false);
         jPanel1.add(HargaField);

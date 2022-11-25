@@ -63,10 +63,10 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(206, 230, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
         jLabel1.setText("Menu Kendaraan");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(200, 70, 200, 80);
+        jLabel1.setBounds(150, 120, 280, 40);
 
         BusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         BusButton.setText("Bus");
@@ -76,7 +76,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BusButton);
-        BusButton.setBounds(260, 230, 76, 28);
+        BusButton.setBounds(340, 290, 180, 28);
 
         MiniBusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MiniBusButton.setText("Mini Bus");
@@ -91,7 +91,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(MiniBusButton);
-        MiniBusButton.setBounds(60, 150, 120, 28);
+        MiniBusButton.setBounds(190, 190, 180, 28);
 
         TaxiButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         TaxiButton.setText("Taxi");
@@ -106,13 +106,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(TaxiButton);
-        TaxiButton.setBounds(420, 160, 76, 28);
+        TaxiButton.setBounds(50, 290, 180, 28);
 
-        jLabel6.setFont(new java.awt.Font("Wide Latin", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Wide Latin", 1, 40)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 102, 0));
         jLabel6.setText("CV.CPP");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(200, 20, 190, 25);
+        jLabel6.setBounds(130, 40, 300, 50);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/5.jpeg"))); // NOI18N
         jLabel5.setText("jLabel5");
