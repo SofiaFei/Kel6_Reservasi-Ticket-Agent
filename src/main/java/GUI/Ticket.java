@@ -82,6 +82,7 @@ public class Ticket extends javax.swing.JFrame {
         Selesai = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -229,13 +230,17 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(Selesai);
         Selesai.setBounds(330, 450, 90, 22);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/7.jpg"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);
         jLabel11.setBounds(0, 0, 450, 480);
 
         jLabel12.setText("jLabel12");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(0, 0, 450, 480);
+
+        jLabel13.setText("jLabel13");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(0, 0, 440, 490);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -352,6 +357,7 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
