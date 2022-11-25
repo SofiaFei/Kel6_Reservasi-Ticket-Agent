@@ -83,7 +83,7 @@ public class Ticket extends javax.swing.JFrame {
         Waktu = new javax.swing.JTextField();
         Jenis = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        Selesai = new javax.swing.JButton();
+        Done = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -138,29 +138,14 @@ public class Ticket extends javax.swing.JFrame {
         jLabel5.setBounds(30, 120, 60, 16);
 
         Harga.setEditable(false);
-        Harga.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HargaActionPerformed(evt);
-            }
-        });
         jPanel1.add(Harga);
         Harga.setBounds(120, 372, 180, 30);
 
         Nama.setEditable(false);
-        Nama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaActionPerformed(evt);
-            }
-        });
         jPanel1.add(Nama);
         Nama.setBounds(120, 70, 180, 30);
 
         NoKtp.setEditable(false);
-        NoKtp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NoKtpActionPerformed(evt);
-            }
-        });
         jPanel1.add(NoKtp);
         NoKtp.setBounds(120, 112, 180, 30);
 
@@ -185,47 +170,22 @@ public class Ticket extends javax.swing.JFrame {
         jLabel9.setBounds(30, 340, 80, 16);
 
         NoHp.setEditable(false);
-        NoHp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NoHpActionPerformed(evt);
-            }
-        });
         jPanel1.add(NoHp);
         NoHp.setBounds(120, 152, 180, 30);
 
         Asal.setEditable(false);
-        Asal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalActionPerformed(evt);
-            }
-        });
         jPanel1.add(Asal);
         Asal.setBounds(120, 252, 180, 30);
 
         Tujuan.setEditable(false);
-        Tujuan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TujuanActionPerformed(evt);
-            }
-        });
         jPanel1.add(Tujuan);
         Tujuan.setBounds(120, 292, 180, 30);
 
         Waktu.setEditable(false);
-        Waktu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WaktuActionPerformed(evt);
-            }
-        });
         jPanel1.add(Waktu);
         Waktu.setBounds(120, 332, 180, 30);
 
         Jenis.setEditable(false);
-        Jenis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JenisActionPerformed(evt);
-            }
-        });
         jPanel1.add(Jenis);
         Jenis.setBounds(120, 212, 180, 30);
 
@@ -234,23 +194,15 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(20, 220, 90, 20);
 
-        Selesai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Selesai.setText("Done");
-        Selesai.addMouseListener(new java.awt.event.MouseAdapter() {
+        Done.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Done.setText("Done");
+        Done.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SelesaiMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SelesaiMouseExited(evt);
+                DoneMouseClicked(evt);
             }
         });
-        Selesai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SelesaiActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Selesai);
-        Selesai.setBounds(310, 420, 90, 30);
+        jPanel1.add(Done);
+        Done.setBounds(310, 420, 90, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);
@@ -281,49 +233,9 @@ public class Ticket extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void HargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HargaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_HargaActionPerformed
-
-    private void NamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NamaActionPerformed
-
-    private void NoKtpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoKtpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NoKtpActionPerformed
-
-    private void NoHpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoHpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NoHpActionPerformed
-
-    private void AsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AsalActionPerformed
-
-    private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TujuanActionPerformed
-
-    private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_WaktuActionPerformed
-
-    private void JenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JenisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JenisActionPerformed
-
-    private void SelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelesaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SelesaiActionPerformed
-
-    private void SelesaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelesaiMouseClicked
+    private void DoneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DoneMouseClicked
         this.dispose();
-    }//GEN-LAST:event_SelesaiMouseClicked
-
-    private void SelesaiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelesaiMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SelesaiMouseExited
+    }//GEN-LAST:event_DoneMouseClicked
 
     /**
      * @param args the command line arguments
@@ -370,12 +282,12 @@ public class Ticket extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Asal;
+    private javax.swing.JButton Done;
     private javax.swing.JTextField Harga;
     private javax.swing.JTextField Jenis;
     private javax.swing.JTextField Nama;
     private javax.swing.JTextField NoHp;
     private javax.swing.JTextField NoKtp;
-    private javax.swing.JButton Selesai;
     private javax.swing.JTextField Tujuan;
     private javax.swing.JTextField Waktu;
     private javax.swing.JButton jButton1;

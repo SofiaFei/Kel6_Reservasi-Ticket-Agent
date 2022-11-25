@@ -4,10 +4,8 @@
  */
 package GUI;
 
-import Class.Struk;
-import Class.Tiket;
 import Class.Kendaraan;
-import Class.Bus;
+import Class.Struk;
 
 /**
  *
@@ -108,11 +106,6 @@ private Kendaraan jenis;
                 BackButtonMouseClicked(evt);
             }
         });
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
-            }
-        });
         jPanel1.add(BackButton);
         BackButton.setBounds(40, 330, 90, 30);
 
@@ -131,25 +124,10 @@ private Kendaraan jenis;
         jLabel2.setBounds(30, 110, 70, 20);
 
         TujuanField.setEditable(false);
-        TujuanField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                TujuanFieldKeyReleased(evt);
-            }
-        });
         jPanel1.add(TujuanField);
         TujuanField.setBounds(140, 110, 150, 22);
 
         AsalField.setEditable(false);
-        AsalField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalFieldActionPerformed(evt);
-            }
-        });
-        AsalField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                AsalFieldKeyReleased(evt);
-            }
-        });
         jPanel1.add(AsalField);
         AsalField.setBounds(140, 70, 150, 22);
 
@@ -164,11 +142,6 @@ private Kendaraan jenis;
         jLabel6.setBounds(80, 20, 190, 32);
 
         WaktuField.setEditable(false);
-        WaktuField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WaktuFieldActionPerformed(evt);
-            }
-        });
         jPanel1.add(WaktuField);
         WaktuField.setBounds(140, 150, 150, 22);
 
@@ -201,9 +174,6 @@ private Kendaraan jenis;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AsalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalFieldActionPerformed
-    }//GEN-LAST:event_AsalFieldActionPerformed
-
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     Menu menu = new Menu();
     menu.setVisible(true);
@@ -215,22 +185,6 @@ private Kendaraan jenis;
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
-
-    private void WaktuFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_WaktuFieldActionPerformed
-
-    private void AsalFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AsalFieldKeyReleased
-
-    }//GEN-LAST:event_AsalFieldKeyReleased
-
-    private void TujuanFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TujuanFieldKeyReleased
-
-    }//GEN-LAST:event_TujuanFieldKeyReleased
-
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,6 +218,7 @@ private Kendaraan jenis;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new TampilanStruk().setVisible(true);
             }

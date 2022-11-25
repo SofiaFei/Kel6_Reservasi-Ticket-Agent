@@ -89,21 +89,10 @@ public class PesanMiniBus extends javax.swing.JFrame {
                 BackButtonMouseClicked(evt);
             }
         });
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
-            }
-        });
         jPanel1.add(BackButton);
         BackButton.setBounds(50, 310, 72, 30);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
-
-        NamaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaFieldActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Nama :");
 
@@ -151,7 +140,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 40, 270, 140);
+        jPanel2.setBounds(40, 40, 270, 150);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -175,10 +164,6 @@ public class PesanMiniBus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
-
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     Menu menu = new Menu();
     menu.setVisible(true);
@@ -191,10 +176,6 @@ public class PesanMiniBus extends javax.swing.JFrame {
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
-
-    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
@@ -268,6 +249,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new PesanMiniBus().setVisible(true);
             }

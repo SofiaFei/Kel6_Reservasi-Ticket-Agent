@@ -5,8 +5,8 @@
 package GUI;
 
 import Class.Kendaraan;
-import Class.Taksi;
 import Class.Pelanggan;
+import Class.Taksi;
 import javax.swing.JOptionPane;
 
 /**
@@ -65,11 +65,6 @@ public class PesanTaksi extends javax.swing.JFrame {
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
-        Tujuan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TujuanActionPerformed(evt);
-            }
-        });
         jPanel1.add(Tujuan);
         Tujuan.setBounds(30, 260, 110, 26);
 
@@ -100,21 +95,10 @@ public class PesanTaksi extends javax.swing.JFrame {
                 BackButtonMouseClicked(evt);
             }
         });
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
-            }
-        });
         jPanel1.add(BackButton);
         BackButton.setBounds(10, 360, 72, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
-
-        NamaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaFieldActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Nama :");
 
@@ -166,11 +150,6 @@ public class PesanTaksi extends javax.swing.JFrame {
 
         Asal.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
-        Asal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AsalActionPerformed(evt);
-            }
-        });
         jPanel1.add(Asal);
         Asal.setBounds(30, 220, 110, 26);
 
@@ -206,10 +185,6 @@ public class PesanTaksi extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
-
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     Menu menu = new Menu();
     menu.setVisible(true);
@@ -222,10 +197,6 @@ public class PesanTaksi extends javax.swing.JFrame {
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
-
-    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
@@ -296,14 +267,6 @@ public class PesanTaksi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_NextButtonActionPerformed
 
-    private void AsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AsalActionPerformed
-
-    private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TujuanActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -336,6 +299,7 @@ public class PesanTaksi extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new PesanTaksi().setVisible(true);
             }

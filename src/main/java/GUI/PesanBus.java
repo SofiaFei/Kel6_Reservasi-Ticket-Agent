@@ -4,8 +4,8 @@
  */
 package GUI;
 
-import Class.Kendaraan;
 import Class.Bus;
+import Class.Kendaraan;
 import Class.Pelanggan;
 import javax.swing.JOptionPane;
 
@@ -13,13 +13,13 @@ import javax.swing.JOptionPane;
  *
  * @author sofia
  */
-public class PesanBuss extends javax.swing.JFrame {
+public class PesanBus extends javax.swing.JFrame {
 
     /**
-     * Creates new form PesanBuss
+     * Creates new form PesanBus
      */
     private Kendaraan bus = new Bus();
-    public PesanBuss() {
+    public PesanBus() {
         initComponents();
     }
 
@@ -63,21 +63,11 @@ public class PesanBuss extends javax.swing.JFrame {
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau" }));
-        Tujuan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TujuanActionPerformed(evt);
-            }
-        });
         jPanel1.add(Tujuan);
         Tujuan.setBounds(30, 210, 110, 26);
 
         Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
-        Waktu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WaktuActionPerformed(evt);
-            }
-        });
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 250, 110, 26);
 
@@ -103,39 +93,16 @@ public class PesanBuss extends javax.swing.JFrame {
                 BackButtonMouseClicked(evt);
             }
         });
-        BackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackButtonActionPerformed(evt);
-            }
-        });
         jPanel1.add(BackButton);
         BackButton.setBounds(60, 310, 80, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
-
-        NamaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaFieldActionPerformed(evt);
-            }
-        });
 
         jLabel6.setText("Nama :");
 
         jLabel3.setText("No KTP :");
 
         jLabel5.setText("No HP :");
-
-        HPField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HPFieldActionPerformed(evt);
-            }
-        });
-
-        KTPField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KTPFieldActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -203,14 +170,6 @@ public class PesanBuss extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TujuanActionPerformed
-
-    }//GEN-LAST:event_TujuanActionPerformed
-
-    private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
-
-    }//GEN-LAST:event_WaktuActionPerformed
-
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
         String convert = String.valueOf(bus.getHarga());
         TampilanStruk struk = new TampilanStruk(bus,NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
@@ -266,22 +225,6 @@ public class PesanBuss extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BackButtonMouseClicked
 
-    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BackButtonActionPerformed
-
-    private void KTPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KTPFieldActionPerformed
-
-    }//GEN-LAST:event_KTPFieldActionPerformed
-
-    private void HPFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPFieldActionPerformed
-
-    }//GEN-LAST:event_HPFieldActionPerformed
-
-    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaFieldActionPerformed
-
-    }//GEN-LAST:event_NamaFieldActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -299,21 +242,20 @@ public class PesanBuss extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PesanBuss.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PesanBus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PesanBuss().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new PesanBus().setVisible(true);
         });
     }
 
