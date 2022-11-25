@@ -7,6 +7,7 @@ package GUI;
 import Class.Kendaraan;
 import Class.Bus;
 import Class.Pelanggan;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -56,9 +57,9 @@ public class PesanBuss extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("Data Bus  ");
+        jLabel1.setText("Pemesanan Bus  ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(130, 10, 130, 32);
+        jLabel1.setBounds(10, 0, 190, 32);
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau" }));
@@ -218,6 +219,11 @@ public class PesanBuss extends javax.swing.JFrame {
     }//GEN-LAST:event_NextButtonMouseClicked
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+            JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
+        }
+        
+        else{
         Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
         if(Tujuan.getSelectedItem().equals("Tujuan")){
@@ -246,11 +252,12 @@ public class PesanBuss extends javax.swing.JFrame {
         nama = String.valueOf(NamaField.getText());
         pl.setNama(nama);
 
-        noKtp = String.valueOf(KTPField.getText());
+        noKtp = String.valueOf(NamaField.getText());
         pl.setKtp(noKtp);
 
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
+        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked

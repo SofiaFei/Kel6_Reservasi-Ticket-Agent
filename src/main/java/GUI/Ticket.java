@@ -58,6 +58,10 @@ public class Ticket extends javax.swing.JFrame {
     private void initComponents() {
 
         jSeparator2 = new javax.swing.JSeparator();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -83,8 +87,17 @@ public class Ticket extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+
+        jTextField1.setText("jTextField1");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,7 +107,7 @@ public class Ticket extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Tiket ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(190, 10, 80, 30);
+        jLabel1.setBounds(180, 10, 80, 30);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel2.setText("Data Pelanggan");
@@ -115,9 +128,9 @@ public class Ticket extends javax.swing.JFrame {
         jLabel3.setBounds(30, 160, 60, 16);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setText("Harga    :");
+        jLabel4.setText("Harga        :");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 380, 60, 16);
+        jLabel4.setBounds(30, 380, 70, 16);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("No KTP   :");
@@ -157,19 +170,19 @@ public class Ticket extends javax.swing.JFrame {
         jLabel6.setBounds(30, 80, 60, 16);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel7.setText(" Asal       :");
+        jLabel7.setText(" Asal            :");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 260, 60, 16);
+        jLabel7.setBounds(30, 260, 80, 16);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel8.setText("Tujuan    :");
+        jLabel8.setText("Tujuan        :");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(30, 300, 60, 16);
+        jLabel8.setBounds(30, 300, 80, 16);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setText("Waktu    :");
+        jLabel9.setText("Waktu        :");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(30, 340, 60, 16);
+        jLabel9.setBounds(30, 340, 80, 16);
 
         NoHp.setEditable(false);
         NoHp.addActionListener(new java.awt.event.ActionListener() {
@@ -217,9 +230,9 @@ public class Ticket extends javax.swing.JFrame {
         Jenis.setBounds(120, 212, 180, 30);
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel10.setText("Jenis       :");
+        jLabel10.setText("Transportasi  :");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(30, 220, 60, 16);
+        jLabel10.setBounds(20, 220, 90, 20);
 
         Selesai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Selesai.setText("Done");
@@ -242,14 +255,17 @@ public class Ticket extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);
         jLabel11.setBounds(0, 0, 450, 480);
-
-        jLabel12.setText("jLabel12");
         jPanel1.add(jLabel12);
         jLabel12.setBounds(0, 0, 450, 480);
 
         jLabel13.setText("jLabel13");
         jPanel1.add(jLabel13);
         jLabel13.setBounds(0, 0, 440, 490);
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel14.setText("Harga        :");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(30, 380, 70, 16);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -362,11 +378,13 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JButton Selesai;
     private javax.swing.JTextField Tujuan;
     private javax.swing.JTextField Waktu;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -376,8 +394,11 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
