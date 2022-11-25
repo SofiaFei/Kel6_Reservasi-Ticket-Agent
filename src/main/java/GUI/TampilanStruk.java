@@ -159,9 +159,9 @@ private Kendaraan jenis;
         jLabel4.setBounds(30, 70, 70, 20);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
-        jLabel6.setText("Struk Bus");
+        jLabel6.setText("Konfirmasi Tiket");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(120, 20, 120, 32);
+        jLabel6.setBounds(80, 20, 190, 32);
 
         WaktuField.setEditable(false);
         WaktuField.addActionListener(new java.awt.event.ActionListener() {

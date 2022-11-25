@@ -44,11 +44,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Data Mini Bus"/>
+            <Property name="text" type="java.lang.String" value="Pemesanan Mini Bus"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="120" y="10" width="160" height="-1"/>
+              <AbsoluteConstraints x="10" y="0" width="250" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -182,20 +182,20 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel6" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="NamaField" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="NamaField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="KTPField" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel5" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="HPField" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel5" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="HPField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="9" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

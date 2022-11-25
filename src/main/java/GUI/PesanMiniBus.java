@@ -7,6 +7,7 @@ package GUI;
 import Class.Kendaraan;
 import Class.MiniBus;
 import Class.Pelanggan;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -52,9 +53,9 @@ public class PesanMiniBus extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("Data Mini Bus");
+        jLabel1.setText("Pemesanan Mini Bus");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(120, 10, 160, 32);
+        jLabel1.setBounds(10, 0, 250, 32);
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Singkil", "Meulaboh", "Takengon" }));
@@ -138,15 +139,15 @@ public class PesanMiniBus extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NamaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(KTPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HPField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
@@ -196,6 +197,11 @@ public class PesanMiniBus extends javax.swing.JFrame {
     }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+            JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
+        }
+        
+        else{
         Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
         if(Tujuan.getSelectedItem().equals("Tujuan")){
@@ -229,6 +235,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
         
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
+        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     /**

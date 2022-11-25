@@ -7,6 +7,7 @@ package GUI;
 import Class.Kendaraan;
 import Class.Taksi;
 import Class.Pelanggan;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -48,6 +49,8 @@ public class PesanTaksi extends javax.swing.JFrame {
         Asal = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel2.setText("Keterangan : ");
 
@@ -56,9 +59,9 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
-        jLabel1.setText("Data Taxi ");
+        jLabel1.setText(" Pemesanan Taxi ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(130, 10, 120, 32);
+        jLabel1.setBounds(10, 0, 200, 32);
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
@@ -179,6 +182,16 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel1.add(jLabel7);
         jLabel7.setBounds(0, 0, 410, 410);
 
+        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jLabel8.setText("Pemesanan Bus  ");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(10, 0, 190, 32);
+
+        jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 24)); // NOI18N
+        jLabel9.setText("Pemesanan Bus  ");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(10, 0, 190, 32);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -215,7 +228,12 @@ public class PesanTaksi extends javax.swing.JFrame {
     }//GEN-LAST:event_NamaFieldActionPerformed
 
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-    Pelanggan pl = new Pelanggan();
+        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+            JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
+        }
+        
+        else{
+        Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
         if(Asal.getSelectedItem().equals("Asal") && Tujuan.getSelectedItem().equals("Tujuan")){
             taksi.setHarga(0);
@@ -275,6 +293,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
+        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     private void AsalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsalActionPerformed
@@ -339,6 +358,8 @@ public class PesanTaksi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

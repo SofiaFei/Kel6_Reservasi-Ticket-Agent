@@ -64,9 +64,9 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
-        jLabel1.setText("Menu Kendaraan");
+        jLabel1.setText("Menu Transportasi");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(150, 120, 280, 40);
+        jLabel1.setBounds(120, 120, 307, 40);
 
         BusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         BusButton.setText("Bus");
