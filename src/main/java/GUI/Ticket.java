@@ -80,6 +80,8 @@ public class Ticket extends javax.swing.JFrame {
         Jenis = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         Selesai = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -225,7 +227,15 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Selesai);
-        Selesai.setBounds(320, 430, 90, 22);
+        Selesai.setBounds(330, 450, 90, 22);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/7.jpg"))); // NOI18N
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(0, 0, 450, 480);
+
+        jLabel12.setText("jLabel12");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(0, 0, 450, 480);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,9 +245,7 @@ public class Ticket extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
         );
 
         pack();
@@ -342,6 +350,8 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JTextField Waktu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

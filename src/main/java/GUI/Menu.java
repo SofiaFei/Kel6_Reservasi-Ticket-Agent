@@ -62,12 +62,12 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(206, 230, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 3, 24)); // NOI18N
         jLabel1.setText("Menu Kendaraan");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(220, 30, 130, 17);
+        jLabel1.setBounds(190, 0, 200, 80);
 
-        BusButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        BusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         BusButton.setText("Bus");
         BusButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -75,9 +75,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BusButton);
-        BusButton.setBounds(240, 270, 76, 21);
+        BusButton.setBounds(280, 280, 76, 28);
 
-        MiniBusButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        MiniBusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MiniBusButton.setText("Mini Bus");
         MiniBusButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,9 +90,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(MiniBusButton);
-        MiniBusButton.setBounds(110, 150, 73, 21);
+        MiniBusButton.setBounds(100, 190, 120, 28);
 
-        TaxiButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TaxiButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         TaxiButton.setText("Taxi");
         TaxiButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -105,7 +105,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(TaxiButton);
-        TaxiButton.setBounds(380, 150, 76, 21);
+        TaxiButton.setBounds(390, 190, 76, 28);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/5.jpeg"))); // NOI18N
         jLabel5.setText("jLabel5");

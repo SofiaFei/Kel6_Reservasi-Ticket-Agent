@@ -46,6 +46,8 @@ public class PesanTaksi extends javax.swing.JFrame {
         HPField = new javax.swing.JTextField();
         KTPField = new javax.swing.JTextField();
         Asal = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setText("Keterangan : ");
 
@@ -83,7 +85,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 370, 70, 22);
+        NextButton.setBounds(330, 380, 70, 22);
 
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,7 +99,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 370, 72, 22);
+        BackButton.setBounds(0, 380, 72, 22);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -164,6 +166,14 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel1.add(Asal);
         Asal.setBounds(30, 220, 110, 22);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 400, 400);
+
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(0, 0, 410, 410);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -172,7 +182,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
         );
 
         pack();
@@ -320,8 +330,10 @@ public class PesanTaksi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

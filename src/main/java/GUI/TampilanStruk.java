@@ -72,6 +72,8 @@ private Kendaraan jenis;
         jLabel6 = new javax.swing.JLabel();
         WaktuField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
@@ -97,7 +99,7 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(ConfirmButton);
-        ConfirmButton.setBounds(230, 240, 70, 20);
+        ConfirmButton.setBounds(300, 410, 70, 20);
 
         BackButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         BackButton.setText("Back");
@@ -112,7 +114,7 @@ private Kendaraan jenis;
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(60, 240, 80, 20);
+        BackButton.setBounds(10, 410, 80, 20);
 
         HargaField.setEditable(false);
         jPanel1.add(HargaField);
@@ -171,15 +173,25 @@ private Kendaraan jenis;
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 150, 70, 16);
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/6.jpg"))); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(0, 0, 370, 440);
+
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(0, 0, 380, 440);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -270,6 +282,8 @@ private Kendaraan jenis;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
