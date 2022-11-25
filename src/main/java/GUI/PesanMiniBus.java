@@ -44,24 +44,29 @@ public class PesanMiniBus extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         HPField = new javax.swing.JTextField();
         KTPField = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Data Mini Bus");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(160, 20, 120, 17);
+        jLabel1.setBounds(120, 10, 160, 32);
 
+        Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Singkil", "Meulaboh", "Takengon" }));
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(30, 210, 110, 22);
+        Tujuan.setBounds(30, 210, 110, 26);
 
+        Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         jPanel1.add(Waktu);
-        Waktu.setBounds(30, 250, 72, 22);
+        Waktu.setBounds(30, 250, 110, 26);
 
+        NextButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -74,8 +79,9 @@ public class PesanMiniBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(260, 320, 70, 22);
+        NextButton.setBounds(270, 310, 80, 31);
 
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -88,7 +94,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(60, 320, 72, 22);
+        BackButton.setBounds(50, 310, 72, 30);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -146,17 +152,23 @@ public class PesanMiniBus extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 40, 270, 140);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(-3, 0, 410, 380);
+
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 410, 380);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -174,7 +186,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(mb.getHarga());
-    TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
+    TampilanStruk struk = new TampilanStruk(mb,NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
@@ -264,7 +276,9 @@ public class PesanMiniBus extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Tujuan;
     private javax.swing.JComboBox<String> Waktu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

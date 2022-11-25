@@ -21,6 +21,7 @@ private String asal;
 private String tujuan;
 private String waktu;
 private String harga;
+private Kendaraan jenis;
     /**
      * Creates new form DataHargaBus
      */
@@ -28,7 +29,7 @@ private String harga;
         initComponents();
     }
      
-    public TampilanStruk(String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public TampilanStruk(Kendaraan jenis,String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
         this.noKtp= noKtp;
@@ -37,6 +38,7 @@ private String harga;
         this.tujuan= tujuan;
         this.waktu= waktu;
         this.harga= harga;
+        this.jenis = jenis;
         
         AsalField.setText(this.asal);
         TujuanField.setText(this.tujuan);
@@ -57,6 +59,7 @@ private String harga;
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         ConfirmButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
@@ -69,6 +72,8 @@ private String harga;
         jLabel6 = new javax.swing.JLabel();
         WaktuField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
@@ -86,7 +91,7 @@ private String harga;
         jPanel1.setBackground(new java.awt.Color(204, 221, 255));
         jPanel1.setLayout(null);
 
-        ConfirmButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ConfirmButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ConfirmButton.setText("Confirm");
         ConfirmButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -94,9 +99,9 @@ private String harga;
             }
         });
         jPanel1.add(ConfirmButton);
-        ConfirmButton.setBounds(230, 240, 70, 20);
+        ConfirmButton.setBounds(240, 330, 100, 30);
 
-        BackButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -109,16 +114,18 @@ private String harga;
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(60, 240, 80, 20);
+        BackButton.setBounds(40, 330, 90, 30);
 
         HargaField.setEditable(false);
         jPanel1.add(HargaField);
         HargaField.setBounds(140, 190, 150, 22);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Harga         :");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(30, 190, 70, 20);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Tujuan        :");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 110, 70, 20);
@@ -146,14 +153,15 @@ private String harga;
         jPanel1.add(AsalField);
         AsalField.setBounds(140, 70, 150, 22);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Asal            :");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(30, 70, 70, 20);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel6.setText("Struk Bus");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(130, 30, 70, 17);
+        jLabel6.setBounds(120, 20, 120, 32);
 
         WaktuField.setEditable(false);
         WaktuField.addActionListener(new java.awt.event.ActionListener() {
@@ -164,19 +172,30 @@ private String harga;
         jPanel1.add(WaktuField);
         WaktuField.setBounds(140, 150, 150, 22);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Waktu        :");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 150, 70, 16);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/6.jpg"))); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(0, 0, 370, 440);
+
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(0, 0, 380, 440);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,7 +211,7 @@ private String harga;
     }//GEN-LAST:event_BackButtonMouseClicked
 
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Ticket tiket = new Ticket(this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
+    Ticket tiket = new Ticket(this.jenis, this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
     tiket.setVisible(true);
     dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
@@ -267,6 +286,9 @@ private String harga;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

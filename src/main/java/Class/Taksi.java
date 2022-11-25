@@ -15,6 +15,7 @@ package Class;
  */
 public class Taksi extends Kendaraan
 {
+    private String nama;
     public Taksi()
     {
         
@@ -23,5 +24,9 @@ public class Taksi extends Kendaraan
     public Taksi (String t, int h, String k)
     {
         super(t, h, k);
+    }
+    public String getNamaKendaraan(){
+        this.nama = "Taksi";
+        return nama;
     }
 }

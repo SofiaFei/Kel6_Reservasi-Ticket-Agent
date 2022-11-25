@@ -19,6 +19,7 @@ public class Ticket extends javax.swing.JFrame {
     private String tujuan;
     private String waktu;
     private String harga;
+    private Kendaraan jenis;
 
     /**
      * Creates new form Tiket
@@ -26,7 +27,7 @@ public class Ticket extends javax.swing.JFrame {
     public Ticket() {
     }
     
-    public Ticket(String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public Ticket(Kendaraan jenis,String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
         this.noKtp= noKtp;
@@ -35,6 +36,7 @@ public class Ticket extends javax.swing.JFrame {
         this.tujuan= tujuan;
         this.waktu= waktu;
         this.harga= harga;
+        this.jenis = jenis;
         
         Nama.setText(this.nama);
         NoKtp.setText(this.noKtp);
@@ -43,6 +45,7 @@ public class Ticket extends javax.swing.JFrame {
         Tujuan.setText(this.tujuan);
         Waktu.setText(this.waktu);
         Harga.setText(this.harga);
+        Jenis.setText(jenis.getNamaKendaraan());
     }
 
     /**
@@ -74,6 +77,12 @@ public class Ticket extends javax.swing.JFrame {
         Asal = new javax.swing.JTextField();
         Tujuan = new javax.swing.JTextField();
         Waktu = new javax.swing.JTextField();
+        Jenis = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        Selesai = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -82,12 +91,12 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 226, 226));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Tiket ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(190, 10, 80, 16);
+        jLabel1.setBounds(190, 10, 80, 30);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jLabel2.setText("Data Pelanggan");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 50, 100, 18);
@@ -100,14 +109,17 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(jSeparator3);
         jSeparator3.setBounds(120, 60, 210, 10);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("No HP    :");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(30, 160, 60, 16);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Harga    :");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(30, 340, 60, 16);
+        jLabel4.setBounds(30, 380, 60, 16);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("No KTP   :");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(30, 120, 60, 16);
@@ -119,7 +131,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Harga);
-        Harga.setBounds(120, 340, 180, 22);
+        Harga.setBounds(120, 372, 180, 30);
 
         Nama.setEditable(false);
         Nama.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +140,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Nama);
-        Nama.setBounds(120, 80, 180, 22);
+        Nama.setBounds(120, 70, 180, 30);
 
         NoKtp.setEditable(false);
         NoKtp.addActionListener(new java.awt.event.ActionListener() {
@@ -137,23 +149,27 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NoKtp);
-        NoKtp.setBounds(120, 120, 180, 22);
+        NoKtp.setBounds(120, 112, 180, 30);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel6.setText("Nama     :");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(30, 80, 60, 16);
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel7.setText(" Asal       :");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 220, 60, 16);
+        jLabel7.setBounds(30, 260, 60, 16);
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel8.setText("Tujuan    :");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(30, 260, 60, 16);
+        jLabel8.setBounds(30, 300, 60, 16);
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setText("Waktu    :");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(30, 300, 60, 16);
+        jLabel9.setBounds(30, 340, 60, 16);
 
         NoHp.setEditable(false);
         NoHp.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +178,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NoHp);
-        NoHp.setBounds(120, 160, 180, 22);
+        NoHp.setBounds(120, 152, 180, 30);
 
         Asal.setEditable(false);
         Asal.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +187,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Asal);
-        Asal.setBounds(120, 220, 180, 22);
+        Asal.setBounds(120, 252, 180, 30);
 
         Tujuan.setEditable(false);
         Tujuan.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +196,7 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(120, 260, 180, 22);
+        Tujuan.setBounds(120, 292, 180, 30);
 
         Waktu.setEditable(false);
         Waktu.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +205,51 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Waktu);
-        Waktu.setBounds(120, 300, 180, 22);
+        Waktu.setBounds(120, 332, 180, 30);
+
+        Jenis.setEditable(false);
+        Jenis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JenisActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Jenis);
+        Jenis.setBounds(120, 212, 180, 30);
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel10.setText("Jenis       :");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(30, 220, 60, 16);
+
+        Selesai.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Selesai.setText("Done");
+        Selesai.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SelesaiMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SelesaiMouseExited(evt);
+            }
+        });
+        Selesai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SelesaiActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Selesai);
+        Selesai.setBounds(310, 420, 90, 30);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(0, 0, 450, 480);
+
+        jLabel12.setText("jLabel12");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(0, 0, 450, 480);
+
+        jLabel13.setText("jLabel13");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(0, 0, 440, 490);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,7 +259,7 @@ public class Ticket extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
         );
 
         pack();
@@ -232,6 +292,22 @@ public class Ticket extends javax.swing.JFrame {
     private void WaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WaktuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_WaktuActionPerformed
+
+    private void JenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JenisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JenisActionPerformed
+
+    private void SelesaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelesaiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SelesaiActionPerformed
+
+    private void SelesaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelesaiMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_SelesaiMouseClicked
+
+    private void SelesaiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SelesaiMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SelesaiMouseExited
 
     /**
      * @param args the command line arguments
@@ -279,12 +355,18 @@ public class Ticket extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Asal;
     private javax.swing.JTextField Harga;
+    private javax.swing.JTextField Jenis;
     private javax.swing.JTextField Nama;
     private javax.swing.JTextField NoHp;
     private javax.swing.JTextField NoKtp;
+    private javax.swing.JButton Selesai;
     private javax.swing.JTextField Tujuan;
     private javax.swing.JTextField Waktu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

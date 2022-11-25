@@ -46,6 +46,8 @@ public class PesanTaksi extends javax.swing.JFrame {
         HPField = new javax.swing.JTextField();
         KTPField = new javax.swing.JTextField();
         Asal = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jLabel2.setText("Keterangan : ");
 
@@ -53,11 +55,12 @@ public class PesanTaksi extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
         jLabel1.setText("Data Taxi ");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(170, 20, 90, 17);
+        jLabel1.setBounds(130, 10, 120, 32);
 
+        Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
         Tujuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,12 +68,14 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Tujuan);
-        Tujuan.setBounds(30, 260, 110, 22);
+        Tujuan.setBounds(30, 260, 110, 26);
 
+        Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
         jPanel1.add(Waktu);
-        Waktu.setBounds(30, 300, 72, 22);
+        Waktu.setBounds(30, 300, 110, 26);
 
+        NextButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -83,8 +88,9 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(290, 370, 70, 22);
+        NextButton.setBounds(310, 360, 80, 31);
 
+        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -97,7 +103,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(50, 370, 72, 22);
+        BackButton.setBounds(10, 360, 72, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -155,6 +161,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(40, 40, 270, 150);
 
+        Asal.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
         Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
         Asal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +169,15 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Asal);
-        Asal.setBounds(30, 220, 110, 22);
+        Asal.setBounds(30, 220, 110, 26);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 400, 400);
+
+        jLabel7.setText("jLabel7");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(0, 0, 410, 410);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,7 +187,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
         );
 
         pack();
@@ -190,7 +205,7 @@ public class PesanTaksi extends javax.swing.JFrame {
 
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(taksi.getHarga());
-    TampilanStruk struk = new TampilanStruk(NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
+    TampilanStruk struk = new TampilanStruk(taksi,NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
@@ -320,8 +335,10 @@ public class PesanTaksi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

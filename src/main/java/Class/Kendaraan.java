@@ -14,7 +14,7 @@ package Class;
  * @version (11-11-2022)   
  * @since (10-10-2022)
  */
-public class Kendaraan  implements Struk
+public abstract class Kendaraan  implements Struk
 {
     private String asal;
     private String tujuan;
@@ -86,4 +86,6 @@ public class Kendaraan  implements Struk
     {
         this.ketTempat = ketTempat;
     } 
+    
+    public abstract String getNamaKendaraan();
 }

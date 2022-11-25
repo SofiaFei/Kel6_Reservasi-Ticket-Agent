@@ -29,11 +29,14 @@ public class Menu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         BusButton = new javax.swing.JButton();
         MiniBusButton = new javax.swing.JButton();
         TaxiButton = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Mini Bus ");
@@ -44,17 +47,28 @@ public class Menu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("   Taxi");
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(206, 230, 255));
         jPanel1.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 36)); // NOI18N
         jLabel1.setText("Menu Kendaraan");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(220, 30, 130, 17);
+        jLabel1.setBounds(150, 120, 280, 40);
 
-        BusButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        BusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         BusButton.setText("Bus");
         BusButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -62,9 +76,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BusButton);
-        BusButton.setBounds(240, 270, 76, 21);
+        BusButton.setBounds(340, 290, 180, 28);
 
-        MiniBusButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        MiniBusButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MiniBusButton.setText("Mini Bus");
         MiniBusButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -77,9 +91,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(MiniBusButton);
-        MiniBusButton.setBounds(110, 150, 73, 21);
+        MiniBusButton.setBounds(190, 190, 180, 28);
 
-        TaxiButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TaxiButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         TaxiButton.setText("Taxi");
         TaxiButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -92,7 +106,18 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(TaxiButton);
-        TaxiButton.setBounds(380, 150, 76, 21);
+        TaxiButton.setBounds(50, 290, 180, 28);
+
+        jLabel6.setFont(new java.awt.Font("Wide Latin", 1, 40)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 102, 0));
+        jLabel6.setText("CV.CPP");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(130, 40, 300, 50);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/5.jpeg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(0, 0, 580, 410);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,6 +204,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
