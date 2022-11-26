@@ -5,11 +5,13 @@
 package GUI;
 
 import Class.Kendaraan;
-import Class.Struk;
 
 /**
- *
- * @author romaf
+ * @author (Sofia-2108107010006)
+ * @author (Ayu Aulia-2108107010038)
+ * @author (Dhaifina Alifa Putri-2108107010018)
+ * @author (Putri Ulfayani-2108107010004)
+ * @author (Siti Nurrahmasit-2108107010015)
  */
 public class TampilanStruk extends javax.swing.JFrame {
 private String nama;
@@ -27,6 +29,17 @@ private Kendaraan jenis;
         initComponents();
     }
      
+    /**
+     * TampilanStruk
+     * @param jenis
+     * @param nama
+     * @param noKtp
+     * @param noHp
+     * @param asal
+     * @param tujuan
+     * @param waktu
+     * @param harga 
+     */
     public TampilanStruk(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
@@ -203,13 +216,13 @@ private Kendaraan jenis;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Kendaraan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Kendaraan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Kendaraan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Kendaraan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

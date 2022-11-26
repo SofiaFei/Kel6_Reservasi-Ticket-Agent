@@ -8,8 +8,11 @@ import Class.Kendaraan;
 
 
 /**
- *
- * @author romaf
+ * @author (Sofia-2108107010006)
+ * @author (Ayu Aulia-2108107010038)
+ * @author (Dhaifina Alifa Putri-2108107010018)
+ * @author (Putri Ulfayani-2108107010004)
+ * @author (Siti Nurrahmasit-2108107010015)
  */
 public class Ticket extends javax.swing.JFrame {
     private String nama;
@@ -24,9 +27,22 @@ public class Ticket extends javax.swing.JFrame {
     /**
      * Creates new form Tiket
      */
-    public Ticket() {
+    public Ticket() 
+    {
+        
     }
     
+    /**
+     * Ticket
+     * @param jenis
+     * @param nama
+     * @param noKtp
+     * @param noHp
+     * @param asal
+     * @param tujuan
+     * @param waktu
+     * @param harga 
+     */
     public Ticket(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;

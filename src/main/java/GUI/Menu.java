@@ -5,8 +5,11 @@
 package GUI;
 
 /**
- *
- * @author romaf
+ * @author (Sofia-2108107010006)
+ * @author (Ayu Aulia-2108107010038)
+ * @author (Dhaifina Alifa Putri-2108107010018)
+ * @author (Putri Ulfayani-2108107010004)
+ * @author (Siti Nurrahmasit-2108107010015)
  */
 public class Menu extends javax.swing.JFrame {
 

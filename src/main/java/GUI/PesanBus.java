@@ -10,8 +10,11 @@ import Class.Pelanggan;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author sofia
+ * @author (Sofia-2108107010006)
+ * @author (Ayu Aulia-2108107010038)
+ * @author (Dhaifina Alifa Putri-2108107010018)
+ * @author (Putri Ulfayani-2108107010004)
+ * @author (Siti Nurrahmasit-2108107010015)
  */
 public class PesanBus extends javax.swing.JFrame {
 
@@ -19,7 +22,12 @@ public class PesanBus extends javax.swing.JFrame {
      * Creates new form PesanBus
      */
     private Kendaraan bus = new Bus();
-    public PesanBus() {
+    
+    /**
+     * PesanBus
+     */
+    public PesanBus() 
+    {
         initComponents();
     }
 
