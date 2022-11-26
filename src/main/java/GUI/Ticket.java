@@ -83,7 +83,9 @@ public class Ticket extends javax.swing.JFrame {
         Waktu = new javax.swing.JTextField();
         Jenis = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         Done = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -194,6 +196,10 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(20, 220, 90, 20);
 
+        jLabel16.setText("*penumpang diwajibkan untuk memperlihatkan tiket ini kepada");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(50, 420, 340, 20);
+
         Done.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Done.setText("Done");
         Done.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,17 +208,21 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Done);
-        Done.setBounds(310, 420, 90, 30);
+        Done.setBounds(330, 470, 90, 30);
+
+        jLabel15.setText("petugas dan melakukan pembayaran saat akan menaiki kendaraan");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(40, 430, 360, 20);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(0, 0, 450, 480);
+        jLabel11.setBounds(0, 0, 450, 530);
         jPanel1.add(jLabel12);
         jLabel12.setBounds(0, 0, 450, 480);
 
         jLabel13.setText("jLabel13");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(0, 0, 440, 490);
+        jLabel13.setBounds(30, 0, 440, 490);
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel14.setText("Harga        :");
@@ -227,7 +237,7 @@ public class Ticket extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
         );
 
         pack();
@@ -294,6 +304,8 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

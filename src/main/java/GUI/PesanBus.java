@@ -62,12 +62,12 @@ public class PesanBus extends javax.swing.JFrame {
         jLabel1.setBounds(10, 0, 190, 32);
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau" }));
+        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Medan", "Padang", "Riau", "Palembang", "Lampung", " " }));
         jPanel1.add(Tujuan);
         Tujuan.setBounds(30, 210, 110, 26);
 
         Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
+        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "16:00", "20:00", " " }));
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 250, 110, 26);
 
@@ -196,7 +196,13 @@ public class PesanBus extends javax.swing.JFrame {
         } else if(Tujuan.getSelectedItem().equals("Riau")){
             bus.setHarga(500000);
             bus.setTujuan("Riau");
-        }
+        } else if(Tujuan.getSelectedItem().equals("Palembang")){
+            bus.setHarga(550000);
+            bus.setTujuan("Palembang");
+        } else if(Tujuan.getSelectedItem().equals("Lampung")){
+            bus.setHarga(500000);
+            bus.setTujuan("Lampung");
+        } 
 
         if(Waktu.getSelectedItem().equals("Waktu")){
             bus.setWaktu("");
@@ -204,6 +210,8 @@ public class PesanBus extends javax.swing.JFrame {
             bus.setWaktu("08:00");
         } else if(Waktu.getSelectedItem().equals("12:00")){
             bus.setWaktu("12:00");
+        } else if(Waktu.getSelectedItem().equals("16:00")){
+            bus.setWaktu("16:00");
         } else if(Waktu.getSelectedItem().equals("20:00")){
             bus.setWaktu("20:00");
         }

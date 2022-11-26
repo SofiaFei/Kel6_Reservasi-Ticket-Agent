@@ -65,11 +65,12 @@
               <Font name="Segoe UI Historic" size="14" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
+              <StringArray count="5">
                 <StringItem index="0" value="Tujuan"/>
                 <StringItem index="1" value="Darussalam"/>
                 <StringItem index="2" value="Batoh"/>
                 <StringItem index="3" value="Peunayong"/>
+                <StringItem index="4" value="Ulee Lheue"/>
               </StringArray>
             </Property>
           </Properties>
@@ -88,12 +89,13 @@
               <Font name="Segoe UI Historic" size="14" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="6">
                 <StringItem index="0" value="Waktu"/>
                 <StringItem index="1" value="08:00"/>
                 <StringItem index="2" value="12:00"/>
-                <StringItem index="3" value="20:00"/>
-                <StringItem index="4" value=" "/>
+                <StringItem index="3" value="16:00"/>
+                <StringItem index="4" value="20:00"/>
+                <StringItem index="5" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -236,11 +238,12 @@
               <Font name="Segoe UI Historic" size="14" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
+              <StringArray count="5">
                 <StringItem index="0" value="Asal"/>
                 <StringItem index="1" value="Darussalam"/>
                 <StringItem index="2" value="Batoh"/>
                 <StringItem index="3" value="Peunayong"/>
+                <StringItem index="4" value="Ulee Lheue"/>
               </StringArray>
             </Property>
           </Properties>

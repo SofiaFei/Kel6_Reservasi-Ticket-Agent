@@ -64,12 +64,12 @@ public class PesanTaksi extends javax.swing.JFrame {
         jLabel1.setBounds(10, 0, 200, 32);
 
         Tujuan.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong" }));
+        Tujuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tujuan", "Darussalam", "Batoh", "Peunayong", "Ulee Lheue" }));
         jPanel1.add(Tujuan);
         Tujuan.setBounds(30, 260, 110, 26);
 
         Waktu.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "20:00", " " }));
+        Waktu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Waktu", "08:00", "12:00", "16:00", "20:00", " " }));
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 300, 110, 26);
 
@@ -149,7 +149,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel2.setBounds(40, 40, 270, 150);
 
         Asal.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
-        Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong" }));
+        Asal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asal", "Darussalam", "Batoh", "Peunayong", "Ulee Lheue" }));
         jPanel1.add(Asal);
         Asal.setBounds(30, 220, 110, 26);
 
@@ -220,6 +220,10 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setHarga(30000);
             taksi.setAsal("Darussalam");
             taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Darussalam") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
+            taksi.setHarga(35000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Ulee Lheue");
         } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Darussalam")){
             taksi.setHarga(40000);
             taksi.setAsal("Batoh");
@@ -232,6 +236,10 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setHarga(20000);
             taksi.setAsal("Batoh");
             taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
+            taksi.setHarga(20000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Ulee Lheue");
         } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Darussalam")){
             taksi.setHarga(30000);
             taksi.setAsal("Peunayong");
@@ -244,6 +252,26 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setHarga(10000);
             taksi.setAsal("Peunayong");
             taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
+            taksi.setHarga(15000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Ulee Lheue");
+        } else if(Asal.getSelectedItem().equals("Ulee Lheue") && Tujuan.getSelectedItem().equals("Darussalam")){
+            taksi.setHarga(35000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Darussalam");
+        } else if(Asal.getSelectedItem().equals("Ulee Lheue") && Tujuan.getSelectedItem().equals("Batoh")){
+            taksi.setHarga(20000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Batoh");
+        } else if(Asal.getSelectedItem().equals("Ulee Lheue") && Tujuan.getSelectedItem().equals("Peunayong")){
+            taksi.setHarga(15000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Peunayong");
+        } else if(Asal.getSelectedItem().equals("Ulee Lheue") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
+            taksi.setHarga(10000);
+            taksi.setAsal("Ulee Lheue");
+            taksi.setTujuan("Ulee Lheue");
         }
         
         if(Waktu.getSelectedItem().equals("Waktu")){
@@ -252,6 +280,8 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setWaktu("08:00");
         } else if(Waktu.getSelectedItem().equals("12:00")){
             taksi.setWaktu("12:00");
+        } else if(Waktu.getSelectedItem().equals("16:00")){
+            taksi.setWaktu("16:00");
         } else if(Waktu.getSelectedItem().equals("20:00")){
             taksi.setWaktu("20:00");
         }
