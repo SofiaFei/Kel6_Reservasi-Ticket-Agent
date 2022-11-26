@@ -1,7 +1,7 @@
 package Class;
 /**
  * class Struk dibuat dengan menggunakan konsep interface. 
- * Class ini berisi method yang akan dioverride pad class Kendaraan dan Tiket.
+ * Class ini berisi method yang akan dioverride pada class Kendaraan dan Tiket.
  *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)

@@ -27,7 +27,7 @@ private Kendaraan jenis;
         initComponents();
     }
      
-    public TampilanStruk(Kendaraan jenis,String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public TampilanStruk(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
         this.noKtp= noKtp;

@@ -18,6 +18,19 @@ public class Tiket implements Struk
     private String waktu;
     private int harga;
     private String tujuan;
+    private Pelanggan cust = new Pelanggan();
+    
+    public String cetakNama(){
+        return cust.getNama();
+    }
+    
+    public String cetakNoKtp(){
+        return cust.getKtp();
+    }
+    
+    public String cetakNoHp(){
+        return cust.getNoHP();
+    }
     
     @Override
     public String getAsal()

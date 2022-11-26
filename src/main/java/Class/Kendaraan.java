@@ -18,7 +18,6 @@ public abstract class Kendaraan  implements Struk
 {
     private String asal;
     private String tujuan;
-    private String ketTempat;
     private String waktu;
     private int harga;
     
@@ -27,11 +26,12 @@ public abstract class Kendaraan  implements Struk
         this.asal = "Banda Aceh";
     }
     
-    public Kendaraan(String t, int h, String k)
+    public Kendaraan(String asal, String tujuan, String waktu, int harga)
     {
-        this.tujuan = t;
-        this.harga = h;
-        this.ketTempat = k;
+        this.asal = asal;
+        this.tujuan = tujuan;
+        this.waktu = waktu;
+        this.harga = harga;
     } 
     
     @Override
@@ -77,15 +77,6 @@ public abstract class Kendaraan  implements Struk
     {
         this.waktu = waktu;
     }
-    public String getketTempat()
-    {
-        return this.ketTempat; 
-    }
-    
-    public void setketTempat(String ketTempat)
-    {
-        this.ketTempat = ketTempat;
-    } 
     
     public abstract String getNamaKendaraan();
 }

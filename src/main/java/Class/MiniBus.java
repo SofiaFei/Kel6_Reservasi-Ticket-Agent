@@ -21,10 +21,12 @@ public class MiniBus extends Kendaraan
         
     }
     
-    public MiniBus (String t, int h, String k)
+    public MiniBus (String asal, String tujuan, String waktu, int harga)
     {
-        super(t, h, k);
+        super(asal, tujuan, waktu, harga);
     }
+    
+    @Override
     public String getNamaKendaraan(){
         this.nama = "Minibus";
         return nama;

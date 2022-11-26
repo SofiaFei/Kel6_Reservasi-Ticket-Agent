@@ -21,10 +21,11 @@ public class Taksi extends Kendaraan
         
     }
     
-    public Taksi (String t, int h, String k)
+    public Taksi (String asal, String tujuan, String waktu, int harga)
     {
-        super(t, h, k);
+        super(asal, tujuan, waktu, harga);
     }
+    
     public String getNamaKendaraan(){
         this.nama = "Taksi";
         return nama;

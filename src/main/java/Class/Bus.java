@@ -21,11 +21,12 @@ public class Bus extends Kendaraan
         
     }
     
-    public Bus (String t, int h, String k)
+    public Bus (String asal, String tujuan, String waktu, int harga)
     {
-        super(t, h, k);
+        super(asal, tujuan, waktu, harga);
     }
     
+    @Override
     public String getNamaKendaraan(){
         this.nama = "Bus";
         return nama;

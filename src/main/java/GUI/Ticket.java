@@ -27,7 +27,7 @@ public class Ticket extends javax.swing.JFrame {
     public Ticket() {
     }
     
-    public Ticket(Kendaraan jenis,String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public Ticket(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
         this.nama= nama;
         this.noKtp= noKtp;
