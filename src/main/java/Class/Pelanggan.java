@@ -3,11 +3,11 @@ package Class;
  * Class Pelanggan berisi data yang berhubungan dengan pelanggan yang akan memesan tiket secara online pada agent tiket ini. 
  * Class ini diposisikan sebagai user dalam mengakses menu tiket.
  * 
- * @author (Sofia (2108107010006)
- * @author (Ayu Aulia (2108107010038)
- * @author (Dhaifina Alifa Putri (2108107010018)
- * @author (Putri Ulfayani (2108107010004)
- * @author (Siti Nurrahmasita(2108107010015)
+ * @author Sofia (2108107010006)
+ * @author Ayu Aulia (2108107010038)
+ * @author Dhaifina Alifa Putri (2108107010018)
+ * @author Putri Ulfayani (2108107010004)
+ * @author Siti Nurrahmasita (2108107010015)
  *
  * @version (27-11-2022)
  * @since (10-11-2022)
