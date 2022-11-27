@@ -1,6 +1,6 @@
 package Class;
 /**
- * class Bus dibuat dengan menggunakan konsep inheritance.
+ * Class Bus dibuat dengan menggunakan konsep inheritance.
  * Dalam konsep inheritance, class ini berperan sebagai subclass.
  * Class ini mewarisi method yang ada di class Kendaraan sehingga hanya perlu dibuat method constructornya.
  *
@@ -15,13 +15,38 @@ package Class;
  */
 public class Bus extends Kendaraan
 {
+    //instance variable
+    private String nama;
+    
+    /**
+     * Constructor method tanpa parameter untuk menciptakan objek Bus.
+     */
     public Bus()
     {
         
     }
     
-    public Bus (String t, int h, String k)
+    /**
+     * Constructor method dengan parameter.
+     * @param asal merupakan variabel yang ada pada super class Kendaraan.
+     * @param tujuan merupakan variabel yang ada pada super class Kendaraan.
+     * @param waktu merupakan variabel yang ada pada super class Kendaraan.
+     * @param harga merupakan variabel yang ada pada super class Kendaraan.
+     */
+    public Bus (String asal, String tujuan, String waktu, int harga)
     {
-        super(t, h, k);
+        super(asal, tujuan, waktu, harga);
+    }
+    
+    /**
+     * getNamaKendaraan adalah bentuk override abstract method dari class Kendaraan.
+     * Method ini berfungsi untuk mendapatkan nama kendaraan yaitu Bus.
+     * @return nama untuk mengembalikan informasi dasar dari nama kendaraan.
+     */
+    @Override
+    public String getNamaKendaraan()
+    {
+        this.nama = "Bus";
+        return nama;
     }
 }
