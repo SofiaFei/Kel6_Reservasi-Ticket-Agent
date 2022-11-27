@@ -6,15 +6,21 @@ package GUI;
 
 import Class.Kendaraan;
 
-
 /**
+ * Tampilan e-tiket dimana user dapat membawanya ke petugas 
+ * untuk melanjutkan proses pembayaran
+ *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class Ticket extends javax.swing.JFrame {
+
     private String nama;
     private String noKtp;
     private String noHp;
@@ -25,15 +31,15 @@ public class Ticket extends javax.swing.JFrame {
     private Kendaraan jenis;
 
     /**
-     * Creates new form Tiket
+     * Creates new form Ticket
      */
-    public Ticket() 
-    {
-        
+    public Ticket() {
+
     }
-    
+
     /**
      * Ticket
+     *
      * @param jenis
      * @param nama
      * @param noKtp
@@ -41,19 +47,19 @@ public class Ticket extends javax.swing.JFrame {
      * @param asal
      * @param tujuan
      * @param waktu
-     * @param harga 
+     * @param harga
      */
     public Ticket(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
-        this.nama= nama;
-        this.noKtp= noKtp;
-        this.noHp= noHp;
-        this.asal= asal;
-        this.tujuan= tujuan;
-        this.waktu= waktu;
-        this.harga= harga;
+        this.nama = nama;
+        this.noKtp = noKtp;
+        this.noHp = noHp;
+        this.asal = asal;
+        this.tujuan = tujuan;
+        this.waktu = waktu;
+        this.harga = harga;
         this.jenis = jenis;
-        
+
         Nama.setText(this.nama);
         NoKtp.setText(this.noKtp);
         NoHp.setText(this.noHp);
@@ -214,7 +220,7 @@ public class Ticket extends javax.swing.JFrame {
 
         jLabel16.setText("*penumpang diwajibkan untuk memperlihatkan tiket ini kepada");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(50, 420, 340, 20);
+        jLabel16.setBounds(50, 420, 360, 20);
 
         Done.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Done.setText("Done");
@@ -228,7 +234,7 @@ public class Ticket extends javax.swing.JFrame {
 
         jLabel15.setText("petugas dan melakukan pembayaran saat akan menaiki kendaraan");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(40, 430, 360, 20);
+        jLabel15.setBounds(40, 430, 380, 20);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/8.jpg"))); // NOI18N
         jPanel1.add(jLabel11);
@@ -258,7 +264,12 @@ public class Ticket extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Method ini berfungsi sebagai tombol done
+     * dimana user telah selesai dengan aplikasi dan akan 
+     * langsung keluar dari aplikasi ketika diklik
+     */
     private void DoneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DoneMouseClicked
         this.dispose();
     }//GEN-LAST:event_DoneMouseClicked

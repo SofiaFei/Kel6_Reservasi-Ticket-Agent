@@ -1,6 +1,7 @@
 package Main;
 
 import GUI.Menu;
+
 /**
  * class Main .
  *
@@ -10,15 +11,20 @@ import GUI.Menu;
  * @author (Putri Ulfayani (2108107010004)
  * @author (Siti Nurrahmasita(2108107010015)
  *
- * @version (11-11-2022)
- * @since (10-10-2022)
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
-public class Main
-{
-    public static void main(String[] args){
-        
+public class Main {
+
+    /**
+     * Method Main
+     *
+     * @param args command line argument
+     */
+    public static void main(String[] args) {
+
         Menu m = new Menu();
-            
+
         m.setVisible(true);
     }
 }
