@@ -10,11 +10,17 @@ import Class.Pelanggan;
 import javax.swing.JOptionPane;
 
 /**
+ * Tampilan Pemesanan Bus dimana user akan menginput data diri beserta tujuan
+ * dan waktu yang diinginkan
+ *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class PesanBus extends javax.swing.JFrame {
 
@@ -22,12 +28,11 @@ public class PesanBus extends javax.swing.JFrame {
      * Creates new form PesanBus
      */
     private Kendaraan bus = new Bus();
-    
+
     /**
-     * PesanBus
+     * Creates new form PesanBus
      */
-    public PesanBus() 
-    {
+    public PesanBus() {
         initComponents();
     }
 
@@ -156,7 +161,7 @@ public class PesanBus extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(0, 0, 390, 370);
+        jLabel4.setBounds(0, 0, 390, 380);
 
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7);
@@ -178,49 +183,58 @@ public class PesanBus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method ini berfungsi sebagai tombol next, jika user telah selesai
+     * menginput data maka akan diarahkan ke form Konfirmasi setelah tombol ini
+     * di klik
+     */
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
         String convert = String.valueOf(bus.getHarga());
-        TampilanStruk struk = new TampilanStruk(bus,NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
+        KonfirmasiTiket struk = new KonfirmasiTiket(bus, NamaField.getText(), KTPField.getText(), HPField.getText(), bus.getAsal(), bus.getTujuan(), bus.getWaktu(), convert);
         struk.setVisible(true);
         dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
 
+    /**
+     * Method ini berfungsi sebagai algoritma dari form PesanBus yang akan
+     * dijalankan saat user mengklik next button
+     */
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+        // untuk user yang tidak menginput data saat mengisi form PesanBus
+        if (NamaField.getText().length() <= 0 || NamaField.getText().length() <= 0 || HPField.getText().length() <= 0) {
             JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
         }
-        
-        else{
+
         Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
-        if(Tujuan.getSelectedItem().equals("Tujuan")){
+        if (Tujuan.getSelectedItem().equals("Tujuan")) {
             bus.setHarga(0);
-        } else if(Tujuan.getSelectedItem().equals("Medan")){
+        } else if (Tujuan.getSelectedItem().equals("Medan")) {
             bus.setHarga(200000);
             bus.setTujuan("Medan");
-        } else if(Tujuan.getSelectedItem().equals("Padang")){
+        } else if (Tujuan.getSelectedItem().equals("Padang")) {
             bus.setHarga(400000);
             bus.setTujuan("Padang");
-        } else if(Tujuan.getSelectedItem().equals("Riau")){
+        } else if (Tujuan.getSelectedItem().equals("Riau")) {
             bus.setHarga(500000);
             bus.setTujuan("Riau");
-        } else if(Tujuan.getSelectedItem().equals("Palembang")){
+        } else if (Tujuan.getSelectedItem().equals("Palembang")) {
             bus.setHarga(550000);
             bus.setTujuan("Palembang");
-        } else if(Tujuan.getSelectedItem().equals("Lampung")){
+        } else if (Tujuan.getSelectedItem().equals("Lampung")) {
             bus.setHarga(500000);
             bus.setTujuan("Lampung");
-        } 
+        }
 
-        if(Waktu.getSelectedItem().equals("Waktu")){
+        if (Waktu.getSelectedItem().equals("Waktu")) {
             bus.setWaktu("");
-        } else if(Waktu.getSelectedItem().equals("08:00")){
+        } else if (Waktu.getSelectedItem().equals("08:00")) {
             bus.setWaktu("08:00");
-        } else if(Waktu.getSelectedItem().equals("12:00")){
+        } else if (Waktu.getSelectedItem().equals("12:00")) {
             bus.setWaktu("12:00");
-        } else if(Waktu.getSelectedItem().equals("16:00")){
+        } else if (Waktu.getSelectedItem().equals("16:00")) {
             bus.setWaktu("16:00");
-        } else if(Waktu.getSelectedItem().equals("20:00")){
+        } else if (Waktu.getSelectedItem().equals("20:00")) {
             bus.setWaktu("20:00");
         }
 
@@ -232,9 +246,13 @@ public class PesanBus extends javax.swing.JFrame {
 
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
-        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
+    /**
+     * Method ini berfungsi sebagai tombol back, jika user tidak jadi menginput
+     * data dan ingin kembali ke form sebelumnya maka akan diarahkan ke form
+     * menu setelah tombol ini di klik
+     */
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
         Menu menu = new Menu();
         menu.setVisible(true);

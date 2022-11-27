@@ -10,17 +10,24 @@ import Class.Pelanggan;
 import javax.swing.JOptionPane;
 
 /**
+ * Tampilan Pemesanan Minibus dimana user akan menginput data diri beserta
+ * tujuan dan waktu yang diinginkan
+ *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class PesanMiniBus extends javax.swing.JFrame {
-    
+
     private Kendaraan mb = new MiniBus();
+
     /**
-     * Creates new form DataMiniBus
+     * Creates new form PesanMiniBus
      */
     public PesanMiniBus() {
         initComponents();
@@ -157,7 +164,7 @@ public class PesanMiniBus extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,67 +174,80 @@ public class PesanMiniBus extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method ini berfungsi sebagai tombol back, jika user tidak jadi menginput
+     * data dan ingin kembali ke form sebelumnya maka akan diarahkan ke form
+     * menu setelah tombol ini di klik
+     */
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
-    Menu menu = new Menu();
-    menu.setVisible(true);
-    dispose();
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BackButtonMouseClicked
 
+    /**
+     * Method ini berfungsi sebagai tombol next, jika user telah selesai
+     * menginput data maka akan diarahkan ke form Konfirmasi setelah tombol ini
+     * di klik
+     */
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
-    String convert = String.valueOf(mb.getHarga());
-    TampilanStruk struk = new TampilanStruk(mb,NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
-    struk.setVisible(true);
-    dispose();
+        String convert = String.valueOf(mb.getHarga());
+        KonfirmasiTiket struk = new KonfirmasiTiket(mb, NamaField.getText(), KTPField.getText(), HPField.getText(), mb.getAsal(), mb.getTujuan(), mb.getWaktu(), convert);
+        struk.setVisible(true);
+        dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
 
+    /**
+     * Method ini berfungsi sebagai algoritma dari form PesanMiniBus yang akan
+     * dijalankan saat user mengklik next button
+     */
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
-        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+        // untuk user yang tidak menginput data saat mengisi form PesanMiniBus
+        if (NamaField.getText().length() <= 0 || NamaField.getText().length() <= 0 || HPField.getText().length() <= 0) {
             JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
         }
-        
-        else{
+
         Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
-        if(Tujuan.getSelectedItem().equals("Tujuan")){
+        if (Tujuan.getSelectedItem().equals("Tujuan")) {
             mb.setHarga(0);
-        } else if(Tujuan.getSelectedItem().equals("Singkil")){
+        } else if (Tujuan.getSelectedItem().equals("Singkil")) {
             mb.setHarga(250000);
             mb.setTujuan("Singkil");
-        } else if(Tujuan.getSelectedItem().equals("Meulaboh")){
+        } else if (Tujuan.getSelectedItem().equals("Meulaboh")) {
             mb.setHarga(120000);
             mb.setTujuan("Meulaboh");
-        } else if(Tujuan.getSelectedItem().equals("Takengon")){
+        } else if (Tujuan.getSelectedItem().equals("Takengon")) {
             mb.setHarga(170000);
             mb.setTujuan("Takengon");
-        } else if(Tujuan.getSelectedItem().equals("Lhokseumawe")){
+        } else if (Tujuan.getSelectedItem().equals("Lhokseumawe")) {
             mb.setHarga(180000);
             mb.setTujuan("Lhokseumawe");
-        } else if(Tujuan.getSelectedItem().equals("Tapaktuan")){
+        } else if (Tujuan.getSelectedItem().equals("Tapaktuan")) {
             mb.setHarga(150000);
             mb.setTujuan("Tapaktuan");
         }
-        
-        if(Waktu.getSelectedItem().equals("Waktu")){
+
+        if (Waktu.getSelectedItem().equals("Waktu")) {
             mb.setWaktu("");
-        } else if(Waktu.getSelectedItem().equals("08:00")){
+        } else if (Waktu.getSelectedItem().equals("08:00")) {
             mb.setWaktu("08:00");
-        } else if(Waktu.getSelectedItem().equals("12:00")){
+        } else if (Waktu.getSelectedItem().equals("12:00")) {
             mb.setWaktu("12:00");
-        } else if(Waktu.getSelectedItem().equals("16:00")){
+        } else if (Waktu.getSelectedItem().equals("16:00")) {
             mb.setWaktu("16:00");
-        } else if(Waktu.getSelectedItem().equals("20:00")){
+        } else if (Waktu.getSelectedItem().equals("20:00")) {
             mb.setWaktu("20:00");
         }
-    
+
         nama = String.valueOf(NamaField.getText());
         pl.setNama(nama);
-    
+
         noKtp = String.valueOf(KTPField.getText());
-        pl.setKtp(noKtp); 
-        
+        pl.setKtp(noKtp);
+
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
-        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     /**

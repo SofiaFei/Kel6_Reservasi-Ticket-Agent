@@ -7,30 +7,42 @@ package GUI;
 import Class.Kendaraan;
 
 /**
+ * Tampilan Konfirmasi tiket dimana berisi asal, tujuan, waktu, dan harga dari
+ * data yang diinput user pada form sebelumnya Tampilan ini berfungsi untuk
+ * mengecek dahulu sebelum memesan tiket, jika user tidak jadi maka dapat
+ * menekan back button dan jika jadi user dapat menekan confirm button dan akan
+ * dicetak e-tiket
+ *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
-public class TampilanStruk extends javax.swing.JFrame {
-private String nama;
-private String noKtp;
-private String noHp;
-private String asal;
-private String tujuan;
-private String waktu;
-private String harga;
-private Kendaraan jenis;
+public class KonfirmasiTiket extends javax.swing.JFrame {
+
+    private String nama;
+    private String noKtp;
+    private String noHp;
+    private String asal;
+    private String tujuan;
+    private String waktu;
+    private String harga;
+    private Kendaraan jenis;
+
     /**
-     * Creates new form DataHargaBus
+     * Creates new form Konfirmasi Tiket
      */
-    public TampilanStruk() {
+    public KonfirmasiTiket() {
         initComponents();
     }
-     
+
     /**
-     * TampilanStruk
+     * KonfirmasiTiket
+     *
      * @param jenis
      * @param nama
      * @param noKtp
@@ -38,19 +50,19 @@ private Kendaraan jenis;
      * @param asal
      * @param tujuan
      * @param waktu
-     * @param harga 
+     * @param harga
      */
-    public TampilanStruk(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
+    public KonfirmasiTiket(Kendaraan jenis, String nama, String noKtp, String noHp, String asal, String tujuan, String waktu, String harga) {
         initComponents();
-        this.nama= nama;
-        this.noKtp= noKtp;
-        this.noHp= noHp;
-        this.asal= asal;
-        this.tujuan= tujuan;
-        this.waktu= waktu;
-        this.harga= harga;
+        this.nama = nama;
+        this.noKtp = noKtp;
+        this.noHp = noHp;
+        this.asal = asal;
+        this.tujuan = tujuan;
+        this.waktu = waktu;
+        this.harga = harga;
         this.jenis = jenis;
-        
+
         AsalField.setText(this.asal);
         TujuanField.setText(this.tujuan);
         WaktuField.setText(this.waktu);
@@ -187,16 +199,26 @@ private Kendaraan jenis;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method ini berfungsi sebagai tombol back, jika user tidak jadi memesan
+     * tiket dan ingin kembali ke form sebelumnya maka akan diarahkan ke form
+     * menu setelah tombol ini di klik
+     */
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
-    Menu menu = new Menu();
-    menu.setVisible(true);
-    dispose();
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BackButtonMouseClicked
 
+    /**
+     * Method ini berfungsi sebagai tombol confirm jika user telah yakin ingin
+     * memesan tiket maka akan diarahkan ke form ticket setelah tombol ini
+     * diklik
+     */
     private void ConfirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmButtonMouseClicked
-    Ticket tiket = new Ticket(this.jenis, this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
-    tiket.setVisible(true);
-    dispose();
+        Ticket tiket = new Ticket(this.jenis, this.nama, this.noKtp, this.noHp, this.asal, this.tujuan, this.waktu, this.harga);
+        tiket.setVisible(true);
+        dispose();
     }//GEN-LAST:event_ConfirmButtonMouseClicked
 
     /**
@@ -231,7 +253,7 @@ private Kendaraan jenis;
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new TampilanStruk().setVisible(true);
+            new KonfirmasiTiket().setVisible(true);
         });
     }
 

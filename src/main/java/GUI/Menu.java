@@ -5,11 +5,16 @@
 package GUI;
 
 /**
+ * Tampilan Menu dimana user dapat memilih tiket apa yang ingin dipesan
+ *
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class Menu extends javax.swing.JFrame {
 
@@ -37,7 +42,7 @@ public class Menu extends javax.swing.JFrame {
         Menu = new javax.swing.JLabel();
         BusButton = new javax.swing.JButton();
         MiniBusButton = new javax.swing.JButton();
-        TaxiButton = new javax.swing.JButton();
+        TaksiButton = new javax.swing.JButton();
         CV = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -91,15 +96,15 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.add(MiniBusButton);
         MiniBusButton.setBounds(190, 190, 180, 28);
 
-        TaxiButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        TaxiButton.setText("Taxi");
-        TaxiButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        TaksiButton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        TaksiButton.setText("Taksi");
+        TaksiButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TaxiButtonMouseClicked(evt);
+                TaksiButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(TaxiButton);
-        TaxiButton.setBounds(50, 290, 180, 28);
+        jPanel1.add(TaksiButton);
+        TaksiButton.setBounds(50, 290, 180, 28);
 
         CV.setFont(new java.awt.Font("Wide Latin", 1, 40)); // NOI18N
         CV.setForeground(new java.awt.Color(153, 102, 0));
@@ -126,22 +131,35 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Method ini berfungsi sebagai tombol minibus, jika user ingin memesan
+     * tiket minibus maka akan diarahkan ke form minibus setelah tombol ini di
+     * klik
+     */
     private void MiniBusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MiniBusButtonMouseClicked
-    PesanMiniBus minibus = new PesanMiniBus();
-    minibus.setVisible(true);
-    dispose();
+        PesanMiniBus minibus = new PesanMiniBus();
+        minibus.setVisible(true);
+        dispose();
     }//GEN-LAST:event_MiniBusButtonMouseClicked
 
-    private void TaxiButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaxiButtonMouseClicked
-    PesanTaksi taxi = new PesanTaksi();
-    taxi.setVisible(true);
-    dispose();
-    }//GEN-LAST:event_TaxiButtonMouseClicked
+    /**
+     * Method ini berfungsi sebagai tombol taksi, jika user ingin memesan tiket
+     * taksi maka akan diarahkan ke form taksi setelah tombol ini di klik
+     */
+    private void TaksiButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaksiButtonMouseClicked
+        PesanTaksi taksi = new PesanTaksi();
+        taksi.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_TaksiButtonMouseClicked
 
+    /**
+     * Method ini berfungsi sebagai tombol bus, jika user ingin memesan tiket
+     * bus maka akan diarahkan ke form bus setelah tombol ini di klik
+     */
     private void BusButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BusButtonMouseClicked
-    PesanBus bus = new PesanBus();
-    bus.setVisible(true);
-    dispose();
+        PesanBus bus = new PesanBus();
+        bus.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BusButtonMouseClicked
 
     /**
@@ -183,7 +201,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel CV;
     private javax.swing.JLabel Menu;
     private javax.swing.JButton MiniBusButton;
-    private javax.swing.JButton TaxiButton;
+    private javax.swing.JButton TaksiButton;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

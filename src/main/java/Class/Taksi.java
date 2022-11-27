@@ -10,8 +10,8 @@ package Class;
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasita-2108107010015)
  *
- * @version (11-11-2022)
- * @since (10-10-2022)
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class Taksi extends Kendaraan
 {

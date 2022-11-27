@@ -1,5 +1,4 @@
 GUI\PesanMiniBus$3.class
-Class\Struk.class
 GUI\TampilanStruk.class
 GUI\PesanTaksi$2.class
 GUI\Menu$2.class
@@ -10,7 +9,6 @@ Class\Kendaraan.class
 Class\MiniBus.class
 GUI\Ticket$1.class
 GUI\Ticket.class
-Class\Tiket.class
 GUI\PesanTaksi$1.class
 GUI\PesanTaksi$3.class
 Class\Pelanggan.class

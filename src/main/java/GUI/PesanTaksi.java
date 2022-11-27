@@ -10,17 +10,23 @@ import Class.Taksi;
 import javax.swing.JOptionPane;
 
 /**
+ * Tampilan Pemesanan Taksi dimana user akan menginput data diri
+ * beserta asal, tujuan dan waktu yang diinginkan 
+ * 
  * @author (Sofia-2108107010006)
  * @author (Ayu Aulia-2108107010038)
  * @author (Dhaifina Alifa Putri-2108107010018)
  * @author (Putri Ulfayani-2108107010004)
  * @author (Siti Nurrahmasit-2108107010015)
+ * 
+ * @version (27-11-2022)
+ * @since (10-11-2022)
  */
 public class PesanTaksi extends javax.swing.JFrame {
     
     private Kendaraan taksi = new Taksi();
     /**
-     * Creates new form DataTaxi
+     * Creates new form PesanTaksi
      */
     public PesanTaksi() {
         initComponents();
@@ -76,7 +82,7 @@ public class PesanTaksi extends javax.swing.JFrame {
         jPanel1.add(Waktu);
         Waktu.setBounds(30, 300, 110, 26);
 
-        NextButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        NextButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         NextButton.setText("Next ");
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -89,9 +95,9 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(NextButton);
-        NextButton.setBounds(310, 360, 80, 31);
+        NextButton.setBounds(260, 350, 80, 31);
 
-        BackButton.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 18)); // NOI18N
+        BackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackButton.setText("Back");
         BackButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,7 +105,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BackButton);
-        BackButton.setBounds(10, 360, 72, 31);
+        BackButton.setBounds(50, 350, 72, 31);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pelanggan"));
 
@@ -158,7 +164,7 @@ public class PesanTaksi extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/4.png"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(0, 0, 400, 400);
+        jLabel4.setBounds(0, 0, 410, 410);
 
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7);
@@ -178,35 +184,50 @@ public class PesanTaksi extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    /**
+     * Method ini berfungsi sebagai tombol back,
+     * jika user tidak jadi menginput data dan
+     * ingin kembali ke form sebelumnya maka akan 
+     * diarahkan ke form menu setelah tombol ini di klik
+     */
     private void BackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackButtonMouseClicked
     Menu menu = new Menu();
     menu.setVisible(true);
     dispose();
     }//GEN-LAST:event_BackButtonMouseClicked
-
+    
+    /**
+     * Method ini berfungsi sebagai tombol next,
+     * jika user telah selesai menginput data maka akan 
+     * diarahkan ke form Konfirmasi setelah tombol ini di klik
+     */
     private void NextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextButtonMouseClicked
     String convert = String.valueOf(taksi.getHarga());
-    TampilanStruk struk = new TampilanStruk(taksi,NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
+    KonfirmasiTiket struk = new KonfirmasiTiket(taksi,NamaField.getText(), KTPField.getText(), HPField.getText(), taksi.getAsal(), taksi.getTujuan(), taksi.getWaktu(), convert);
     struk.setVisible(true);
     dispose();
     }//GEN-LAST:event_NextButtonMouseClicked
-
+    
+    /**
+     * Method ini berfungsi sebagai algoritma dari form PesanTaksi
+     * yang akan dijalankan saat user mengklik next button
+     */
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
+        // untuk user yang tidak menginput data saat mengisi form PesanBus
         if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
             JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
         }
         
-        else{
         Pelanggan pl = new Pelanggan();
         String nama, noKtp, noHp;
         if(Asal.getSelectedItem().equals("Asal") && Tujuan.getSelectedItem().equals("Tujuan")){
@@ -225,7 +246,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setTujuan("Peunayong");
         } else if(Asal.getSelectedItem().equals("Darussalam") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
             taksi.setHarga(35000);
-            taksi.setAsal("Ulee Lheue");
+            taksi.setAsal("Darussalam");
             taksi.setTujuan("Ulee Lheue");
         } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Darussalam")){
             taksi.setHarga(40000);
@@ -241,7 +262,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setTujuan("Peunayong");
         } else if(Asal.getSelectedItem().equals("Batoh") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
             taksi.setHarga(20000);
-            taksi.setAsal("Ulee Lheue");
+            taksi.setAsal("Batoh");
             taksi.setTujuan("Ulee Lheue");
         } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Darussalam")){
             taksi.setHarga(30000);
@@ -257,7 +278,7 @@ public class PesanTaksi extends javax.swing.JFrame {
             taksi.setTujuan("Peunayong");
         } else if(Asal.getSelectedItem().equals("Peunayong") && Tujuan.getSelectedItem().equals("Ulee Lheue")){
             taksi.setHarga(15000);
-            taksi.setAsal("Ulee Lheue");
+            taksi.setAsal("Peunayong");
             taksi.setTujuan("Ulee Lheue");
         } else if(Asal.getSelectedItem().equals("Ulee Lheue") && Tujuan.getSelectedItem().equals("Darussalam")){
             taksi.setHarga(35000);
@@ -297,7 +318,6 @@ public class PesanTaksi extends javax.swing.JFrame {
         
         noHp = String.valueOf(HPField.getText());
         pl.setNoHP(noHp);
-        }
     }//GEN-LAST:event_NextButtonActionPerformed
 
     /**
