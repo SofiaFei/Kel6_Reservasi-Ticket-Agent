@@ -224,7 +224,7 @@ public class PesanTaksi extends javax.swing.JFrame {
      */
     private void NextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextButtonActionPerformed
         // untuk user yang tidak menginput data saat mengisi form PesanBus
-        if(NamaField.getText().length()<=0 || NamaField.getText().length()<=0 || HPField.getText().length()<=0){
+        if(NamaField.getText().length()<=0 || KTPField.getText().length()<=0 || HPField.getText().length()<=0){
             JOptionPane.showMessageDialog(null, "Harap mengisi data Anda dengan benar");
         }
         
